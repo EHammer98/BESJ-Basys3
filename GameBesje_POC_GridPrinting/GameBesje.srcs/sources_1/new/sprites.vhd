@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.numeric_std.ALL;
 
 package p_sprite is
     type darray is array (0 to 31, 0 to 23) of integer; 
@@ -11,8 +11,8 @@ use work.p_sprite.all;
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.numeric_std.ALL;
 
 entity sprites is
     Port( 
@@ -21,24 +21,33 @@ entity sprites is
         enable:     in std_logic;
         b1:         in std_logic;
         b2:         in std_logic;
+        dataIn:     in std_logic_vector(7 downto 0);
         arrayOut:   out darray
     );
 end sprites;
 
 architecture Behavioral of sprites is
+    signal test: integer;
+
 
 begin
-
+    test <= to_integer(unsigned(dataIn));
     process(clk25, reset)
     
     variable conf_array: darray := (others => (others => 0));
+    variable x : integer := 0;--
+    variable y : integer := 2;--
+    variable s : integer := test;
     
     begin
+        
         if reset = '1' then
             
-        
+            
         elsif rising_edge(clk25) then  
-            conf_array(0,2) := 1;
+            s := test;
+            conf_array(0,2) := s;
+            --conf_array(0,2) := 1;
             conf_array(1,2) := 1;
             conf_array(2,2) := 1;
             conf_array(3,2) := 1;

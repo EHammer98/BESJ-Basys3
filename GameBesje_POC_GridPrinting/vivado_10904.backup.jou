@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Mar 10 15:19:43 2022
+# Process ID: 10904
+# Current directory: C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13072 C:\Users\Elwin\Vivado\BESJ-Basys3\GameBesje_POC_GridPrinting\GameBesje.xpr
+# Log file: C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/vivado.log
+# Journal file: C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.xpr
+update_compile_order -fileset sources_1
