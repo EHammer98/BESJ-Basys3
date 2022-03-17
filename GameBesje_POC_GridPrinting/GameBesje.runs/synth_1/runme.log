@@ -15,59 +15,24 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 26272 
+INFO: Helper process launched with PID 22624 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 837.570 ; gain = 177.805
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 838.250 ; gain = 178.160
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/top.vhd:28]
-INFO: [Synth 8-3491] module 'Prescaler25' declared at 'C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/synth_1/.Xil/Vivado-13192-HAMMER-PC-01/realtime/Prescaler25_stub.vhdl:5' bound to instance 'Pre0' of component 'Prescaler25' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/top.vhd:82]
-INFO: [Synth 8-638] synthesizing module 'Prescaler25' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/synth_1/.Xil/Vivado-13192-HAMMER-PC-01/realtime/Prescaler25_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'sprites' declared at 'C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:17' bound to instance 'SP0' of component 'sprites' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/top.vhd:88]
-INFO: [Synth 8-638] synthesizing module 'sprites' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:29]
-WARNING: [Synth 8-614] signal 'test' is read in the process but is not in the sensitivity list [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:35]
-WARNING: [Synth 8-6014] Unused sequential element s_reg was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:48]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[0,2] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[1,2] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[2,2] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[2,22] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[3,2] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[3,16] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[3,17] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[3,18] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[3,19] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[3,20] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[4,2] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[16,5] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[17,5] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[17,8] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[18,5] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[19,5] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[20,5] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[21,5] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[22,5] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[23,5] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[24,5] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[25,5] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[26,5] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[27,5] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[28,5] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[28,16] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[28,17] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[28,18] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[28,19] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[28,20] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[29,5] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[30,5] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[30,23] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[31,5] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element conf_array_reg[31,23] was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:49]
-INFO: [Synth 8-256] done synthesizing module 'sprites' (1#1) [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:29]
-INFO: [Synth 8-3491] module 'UART_rx' declared at 'C:/Users/Elwin/Downloads/UART_rx.vhd:8' bound to instance 'receiver' of component 'UART_rx' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/top.vhd:98]
-INFO: [Synth 8-638] synthesizing module 'UART_rx' [C:/Users/Elwin/Downloads/UART_rx.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/top.vhd:30]
+INFO: [Synth 8-3491] module 'Prescaler25' declared at 'C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/synth_1/.Xil/Vivado-23208-HAMMER-PC-01/realtime/Prescaler25_stub.vhdl:5' bound to instance 'Pre0' of component 'Prescaler25' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/top.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'Prescaler25' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/synth_1/.Xil/Vivado-23208-HAMMER-PC-01/realtime/Prescaler25_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'sprites' declared at 'C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:17' bound to instance 'SP0' of component 'sprites' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/top.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'sprites' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:30]
+WARNING: [Synth 8-614] signal 'enSig' is read in the process but is not in the sensitivity list [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:37]
+WARNING: [Synth 8-6014] Unused sequential element s_reg was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'sprites' (1#1) [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:30]
+INFO: [Synth 8-3491] module 'UART_rx' declared at 'C:/Users/Elwin/Downloads/UART_rx.vhd:8' bound to instance 'receiver' of component 'UART_rx' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/top.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'UART_rx' [C:/Users/Elwin/Downloads/UART_rx.vhd:23]
 	Parameter BAUD_X16_CLK_TICKS bound to: 54 - type: integer 
-INFO: [Synth 8-226] default block is never used [C:/Users/Elwin/Downloads/UART_rx.vhd:78]
-INFO: [Synth 8-256] done synthesizing module 'UART_rx' (2#1) [C:/Users/Elwin/Downloads/UART_rx.vhd:22]
-INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:17' bound to instance 'VGA0' of component 'VGA' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/top.vhd:106]
+INFO: [Synth 8-226] default block is never used [C:/Users/Elwin/Downloads/UART_rx.vhd:79]
+INFO: [Synth 8-256] done synthesizing module 'UART_rx' (2#1) [C:/Users/Elwin/Downloads/UART_rx.vhd:23]
+INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:17' bound to instance 'VGA0' of component 'VGA' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/top.vhd:113]
 INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:28]
 WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:1333]
 WARNING: [Synth 8-6014] Unused sequential element tempX_reg was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:1351]
@@ -75,13 +40,19 @@ WARNING: [Synth 8-6014] Unused sequential element tempY_reg was removed.  [C:/Us
 WARNING: [Synth 8-6014] Unused sequential element code_reg was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:1356]
 WARNING: [Synth 8-6014] Unused sequential element ColoursIn_reg was removed.  [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:1360]
 INFO: [Synth 8-256] done synthesizing module 'VGA' (3#1) [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:28]
-WARNING: [Synth 8-3848] Net tmp_en in module/entity top does not have driver. [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/top.vhd:75]
-INFO: [Synth 8-256] done synthesizing module 'top' (4#1) [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/top.vhd:28]
+WARNING: [Synth 8-3848] Net leds in module/entity top does not have driver. [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/top.vhd:26]
+WARNING: [Synth 8-3848] Net tmp_en in module/entity top does not have driver. [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/top.vhd:79]
+INFO: [Synth 8-256] done synthesizing module 'top' (4#1) [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/top.vhd:30]
+WARNING: [Synth 8-3331] design sprites has unconnected port reset
 WARNING: [Synth 8-3331] design sprites has unconnected port enable
 WARNING: [Synth 8-3331] design sprites has unconnected port b1
 WARNING: [Synth 8-3331] design sprites has unconnected port b2
+WARNING: [Synth 8-3331] design top has unconnected port leds[3]
+WARNING: [Synth 8-3331] design top has unconnected port leds[2]
+WARNING: [Synth 8-3331] design top has unconnected port leds[1]
+WARNING: [Synth 8-3331] design top has unconnected port leds[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 979.965 ; gain = 320.199
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1017.559 ; gain = 357.469
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -94,10 +65,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 987.184 ; gain = 327.418
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1017.559 ; gain = 357.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 987.184 ; gain = 327.418
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1017.559 ; gain = 357.469
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -111,20 +82,20 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1169.051 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1238.754 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.154 . Memory (MB): peak = 1169.051 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.346 . Memory (MB): peak = 1238.754 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1169.051 ; gain = 509.285
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1238.754 ; gain = 578.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1169.051 ; gain = 509.285
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1238.754 ; gain = 578.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -133,109 +104,8 @@ Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/E
 Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25/Prescaler25_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for Pre0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1169.051 ; gain = 509.285
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1238.754 ; gain = 578.664
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,1][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,3][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,4][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,5][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,6][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,7][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,8][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,9][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,10][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,11][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,12][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,13][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,14][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,15][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,16][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,17][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,18][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,19][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,20][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,21][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,22][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[0,23][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,0][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,1][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,3][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,4][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,5][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,6][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,7][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,8][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,9][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,10][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,11][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,12][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,13][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,14][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,15][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,16][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,17][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,18][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,19][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,20][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,21][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,22][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[1,23][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,0][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,1][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,2][31:0]' into 'arrayOut_reg[1,2][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,3][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,4][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,5][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,6][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,7][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,8][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,9][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,10][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,11][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,12][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,13][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,14][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,15][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,16][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,17][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,18][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,19][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,20][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,21][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[2,23][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,0][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,1][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,2][31:0]' into 'arrayOut_reg[1,2][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,3][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,4][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,5][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,6][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,7][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,8][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,9][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,10][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,11][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,12][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,13][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,14][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,15][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,17][31:0]' into 'arrayOut_reg[3,16][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,18][31:0]' into 'arrayOut_reg[3,16][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,19][31:0]' into 'arrayOut_reg[3,16][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,21][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,22][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[3,23][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[4,0][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[4,1][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[4,2][31:0]' into 'arrayOut_reg[1,2][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[4,3][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[4,4][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[4,5][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[4,6][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[4,7][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[4,8][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Synth 8-4471] merging register 'arrayOut_reg[4,9][31:0]' into 'arrayOut_reg[0,0][31:0]' [C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd:94]
-INFO: [Common 17-14] Message 'Synth 8-4471' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'UART_rx'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -247,19 +117,26 @@ INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'UA
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'rx_state_reg' using encoding 'sequential' in module 'UART_rx'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1169.051 ; gain = 509.285
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1238.754 ; gain = 578.664
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |sprites__GB0  |           1|     27030|
+|2     |sprites__GB1  |           1|     14128|
+|3     |sprites__GB2  |           1|     11553|
+|4     |sprites__GB3  |           1|     25654|
+|5     |sprites__GB4  |           1|     25243|
+|6     |top__GC0      |           1|     33586|
++------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     32 Bit       Adders := 2     
 	   2 Input     11 Bit       Adders := 3     
 	   2 Input     10 Bit       Adders := 5     
 	   2 Input      6 Bit       Adders := 3     
@@ -267,15 +144,15 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 16    
+	               32 Bit    Registers := 1542  
 	               10 Bit    Registers := 2     
 	                8 Bit    Registers := 2     
 	                6 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 7     
+	                1 Bit    Registers := 8     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
 	   2 Input     10 Bit        Muxes := 5     
 	   2 Input      8 Bit        Muxes := 2     
 	   4 Input      8 Bit        Muxes := 2     
@@ -289,9 +166,9 @@ Detailed RTL Component Info :
 	   4 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
 	 400 Input      2 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 132   
 	   3 Input      1 Bit        Muxes := 3     
-	   4 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 5     
 	 400 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -302,8 +179,13 @@ Start RTL Hierarchical Component Statistics
 Hierarchical RTL Component report 
 Module sprites 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 11    
+	               32 Bit    Registers := 1537  
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 126   
 Module UART_rx 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -315,7 +197,7 @@ Detailed RTL Component Info :
 	                6 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 2     
 	   4 Input      8 Bit        Muxes := 2     
@@ -327,7 +209,7 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 4     
 	   3 Input      1 Bit        Muxes := 3     
-	   4 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 5     
 Module VGA 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -361,118 +243,224 @@ BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design top has unconnected port leds[3]
+WARNING: [Synth 8-3331] design top has unconnected port leds[2]
+WARNING: [Synth 8-3331] design top has unconnected port leds[1]
+WARNING: [Synth 8-3331] design top has unconnected port leds[0]
 WARNING: [Synth 8-3331] design top has unconnected port button1
 WARNING: [Synth 8-3331] design top has unconnected port button2
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[31,23][31]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[30,23][31]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[2,22][31]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[28,20][31]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[3,20][31]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[28,16][31]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[3,16][31]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[17,8][31]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[16,5][31]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[1,2][31]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[0,0][31]' (FDE) to 'SP0/arrayOut_reg[0,0][30]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[31,23][30]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[30,23][30]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[2,22][30]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[28,20][30]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[3,20][30]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[28,16][30]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[3,16][30]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[17,8][30]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[16,5][30]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[1,2][30]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[0,0][30]' (FDE) to 'SP0/arrayOut_reg[0,0][29]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[31,23][29]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[30,23][29]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[2,22][29]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[28,20][29]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[3,20][29]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[28,16][29]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[3,16][29]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[17,8][29]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[16,5][29]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[1,2][29]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[0,0][29]' (FDE) to 'SP0/arrayOut_reg[0,0][28]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[31,23][28]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[30,23][28]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[2,22][28]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[28,20][28]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[3,20][28]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[28,16][28]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[3,16][28]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[17,8][28]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[16,5][28]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[1,2][28]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[0,0][28]' (FDE) to 'SP0/arrayOut_reg[0,0][27]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[31,23][27]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[30,23][27]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[2,22][27]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[28,20][27]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[3,20][27]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[28,16][27]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[3,16][27]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[17,8][27]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[16,5][27]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[1,2][27]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[0,0][27]' (FDE) to 'SP0/arrayOut_reg[0,0][26]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[31,23][26]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[30,23][26]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[2,22][26]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[28,20][26]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[3,20][26]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[28,16][26]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[3,16][26]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[17,8][26]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[16,5][26]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[1,2][26]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[0,0][26]' (FDE) to 'SP0/arrayOut_reg[0,0][25]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[31,23][25]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[30,23][25]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[2,22][25]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[28,20][25]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[3,20][25]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[28,16][25]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[3,16][25]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[17,8][25]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[16,5][25]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[1,2][25]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[0,0][25]' (FDE) to 'SP0/arrayOut_reg[0,0][24]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[31,23][24]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[30,23][24]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[2,22][24]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[28,20][24]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[3,20][24]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[28,16][24]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[3,16][24]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[17,8][24]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[16,5][24]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[1,2][24]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[0,0][24]' (FDE) to 'SP0/arrayOut_reg[0,0][23]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[31,23][23]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[30,23][23]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[2,22][23]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[28,20][23]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[3,20][23]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[28,16][23]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[3,16][23]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[17,8][23]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[16,5][23]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[1,2][23]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[0,0][23]' (FDE) to 'SP0/arrayOut_reg[0,0][22]'
-INFO: [Synth 8-3886] merging instance 'SP0/arrayOut_reg[31,23][22]' (FDRE) to 'SP0/arrayOut_reg[30,23][0]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][8]' (FDE) to 'conf_array_reg[24,4][9]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][9]' (FDE) to 'conf_array_reg[24,4][10]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][10]' (FDE) to 'conf_array_reg[24,4][11]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][11]' (FDE) to 'conf_array_reg[24,4][12]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][12]' (FDE) to 'conf_array_reg[24,4][13]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][13]' (FDE) to 'conf_array_reg[24,4][14]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][14]' (FDE) to 'conf_array_reg[24,4][15]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][15]' (FDE) to 'conf_array_reg[24,4][16]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][16]' (FDE) to 'conf_array_reg[24,4][17]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][17]' (FDE) to 'conf_array_reg[24,4][18]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][18]' (FDE) to 'conf_array_reg[24,4][19]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][19]' (FDE) to 'conf_array_reg[24,4][20]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][20]' (FDE) to 'conf_array_reg[24,4][21]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][21]' (FDE) to 'conf_array_reg[24,4][22]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][22]' (FDE) to 'conf_array_reg[24,4][23]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][23]' (FDE) to 'conf_array_reg[24,4][24]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][24]' (FDE) to 'conf_array_reg[24,4][25]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][25]' (FDE) to 'conf_array_reg[24,4][26]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][26]' (FDE) to 'conf_array_reg[24,4][27]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][27]' (FDE) to 'conf_array_reg[24,4][28]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][28]' (FDE) to 'conf_array_reg[24,4][29]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][29]' (FDE) to 'conf_array_reg[24,4][30]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,4][30]' (FDE) to 'conf_array_reg[24,4][31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[24,4][31] )
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][8]' (FDE) to 'conf_array_reg[24,13][9]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][9]' (FDE) to 'conf_array_reg[24,13][10]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][10]' (FDE) to 'conf_array_reg[24,13][11]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][11]' (FDE) to 'conf_array_reg[24,13][12]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][12]' (FDE) to 'conf_array_reg[24,13][13]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][13]' (FDE) to 'conf_array_reg[24,13][14]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][14]' (FDE) to 'conf_array_reg[24,13][15]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][15]' (FDE) to 'conf_array_reg[24,13][16]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][16]' (FDE) to 'conf_array_reg[24,13][17]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][17]' (FDE) to 'conf_array_reg[24,13][18]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][18]' (FDE) to 'conf_array_reg[24,13][19]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][19]' (FDE) to 'conf_array_reg[24,13][20]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][20]' (FDE) to 'conf_array_reg[24,13][21]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][21]' (FDE) to 'conf_array_reg[24,13][22]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][22]' (FDE) to 'conf_array_reg[24,13][23]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][23]' (FDE) to 'conf_array_reg[24,13][24]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][24]' (FDE) to 'conf_array_reg[24,13][25]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][25]' (FDE) to 'conf_array_reg[24,13][26]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][26]' (FDE) to 'conf_array_reg[24,13][27]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][27]' (FDE) to 'conf_array_reg[24,13][28]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][28]' (FDE) to 'conf_array_reg[24,13][29]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][29]' (FDE) to 'conf_array_reg[24,13][30]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,13][30]' (FDE) to 'conf_array_reg[24,13][31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[24,13][31] )
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][8]' (FDE) to 'conf_array_reg[7,9][9]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][9]' (FDE) to 'conf_array_reg[7,9][10]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][10]' (FDE) to 'conf_array_reg[7,9][11]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][11]' (FDE) to 'conf_array_reg[7,9][12]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][12]' (FDE) to 'conf_array_reg[7,9][13]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][13]' (FDE) to 'conf_array_reg[7,9][14]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][14]' (FDE) to 'conf_array_reg[7,9][15]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][15]' (FDE) to 'conf_array_reg[7,9][16]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][16]' (FDE) to 'conf_array_reg[7,9][17]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][17]' (FDE) to 'conf_array_reg[7,9][18]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][18]' (FDE) to 'conf_array_reg[7,9][19]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][19]' (FDE) to 'conf_array_reg[7,9][20]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][20]' (FDE) to 'conf_array_reg[7,9][21]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][21]' (FDE) to 'conf_array_reg[7,9][22]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][22]' (FDE) to 'conf_array_reg[7,9][23]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][23]' (FDE) to 'conf_array_reg[7,9][24]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][24]' (FDE) to 'conf_array_reg[7,9][25]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][25]' (FDE) to 'conf_array_reg[7,9][26]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][26]' (FDE) to 'conf_array_reg[7,9][27]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][27]' (FDE) to 'conf_array_reg[7,9][28]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][28]' (FDE) to 'conf_array_reg[7,9][29]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][29]' (FDE) to 'conf_array_reg[7,9][30]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,9][30]' (FDE) to 'conf_array_reg[7,9][31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[7,9][31] )
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][8]' (FDE) to 'conf_array_reg[24,2][9]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][9]' (FDE) to 'conf_array_reg[24,2][10]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][10]' (FDE) to 'conf_array_reg[24,2][11]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][11]' (FDE) to 'conf_array_reg[24,2][12]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][12]' (FDE) to 'conf_array_reg[24,2][13]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][13]' (FDE) to 'conf_array_reg[24,2][14]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][14]' (FDE) to 'conf_array_reg[24,2][15]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][15]' (FDE) to 'conf_array_reg[24,2][16]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][16]' (FDE) to 'conf_array_reg[24,2][17]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][17]' (FDE) to 'conf_array_reg[24,2][18]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][18]' (FDE) to 'conf_array_reg[24,2][19]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][19]' (FDE) to 'conf_array_reg[24,2][20]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][20]' (FDE) to 'conf_array_reg[24,2][21]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][21]' (FDE) to 'conf_array_reg[24,2][22]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][22]' (FDE) to 'conf_array_reg[24,2][23]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][23]' (FDE) to 'conf_array_reg[24,2][24]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][24]' (FDE) to 'conf_array_reg[24,2][25]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][25]' (FDE) to 'conf_array_reg[24,2][26]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][26]' (FDE) to 'conf_array_reg[24,2][27]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][27]' (FDE) to 'conf_array_reg[24,2][28]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][28]' (FDE) to 'conf_array_reg[24,2][29]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][29]' (FDE) to 'conf_array_reg[24,2][30]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[24,2][30]' (FDE) to 'conf_array_reg[24,2][31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[24,2][31] )
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,7][8]' (FDE) to 'conf_array_reg[7,7][9]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,7][9]' (FDE) to 'conf_array_reg[7,7][10]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,7][10]' (FDE) to 'conf_array_reg[7,7][11]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,7][11]' (FDE) to 'conf_array_reg[7,7][12]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,7][12]' (FDE) to 'conf_array_reg[7,7][13]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,7][13]' (FDE) to 'conf_array_reg[7,7][14]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,7][14]' (FDE) to 'conf_array_reg[7,7][15]'
+INFO: [Synth 8-3886] merging instance 'conf_array_reg[7,7][15]' (FDE) to 'conf_array_reg[7,7][16]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\SP0/arrayOut_reg[3,16][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SP0/arrayOut_reg[1,2][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SP0/arrayOut_reg[0,0][5] )
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[7,7][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[7,18][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[7,5][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[24,1][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[24,17][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[7,2][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[7,1][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[24,20][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[24,21][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[7,21][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[24,0][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[8,0][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[25,6][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[25,7][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[6,17][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[25,8][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[6,15][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[8,4][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[23,8][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[8,9][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[16,22][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[6,10][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[6,9][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[8,12][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[25,15][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[8,15][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[6,5][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[6,4][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[25,21][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[14,10][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[14,9][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[6,0][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[26,1][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[26,2][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[5,21][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[17,4][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[26,5][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[26,8][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[5,17][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[8,21][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[14,6][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[26,17][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[22,4][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[26,18][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[14,5][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[5,10][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[9,3][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[9,5][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[26,21][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[9,6][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[5,5][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[14,4][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[22,1][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[21,22][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[9,11][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[27,4][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[27,5][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[27,6][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[4,21][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[27,7][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[17,6][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[4,18][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[27,9][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[4,16][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[17,13][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[17,23][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[18,0][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[18,2][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[4,11][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[4,10][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[9,20][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[18,7][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[21,11][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[27,22][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[27,23][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[10,0][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[28,1][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[13,11][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[10,2][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[16,17][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[16,16][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[14,19][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[14,20][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[16,15][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[21,9][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[13,9][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[28,11][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[28,13][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[21,8][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[3,14][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[10,6][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[10,7][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[28,16][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[10,9][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[16,13][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conf_array_reg[16,7][31] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 1169.051 ; gain = 509.285
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:20 ; elapsed = 00:01:53 . Memory (MB): peak = 1238.754 ; gain = 578.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -488,12 +476,6 @@ ROM:
 |VGA         | MushroomYellow[0] | 512x2         | LUT            | 
 |VGA         | HartEmpty[0]      | 512x1         | LUT            | 
 |VGA         | InstaKill[0]      | 512x1         | LUT            | 
-|VGA         | SpaceshipBlue[0]  | 512x2         | LUT            | 
-|VGA         | SpaceshipRed[0]   | 512x2         | LUT            | 
-|VGA         | MushroomRed[0]    | 512x2         | LUT            | 
-|VGA         | MushroomYellow[0] | 512x2         | LUT            | 
-|VGA         | HartEmpty[0]      | 512x1         | LUT            | 
-|VGA         | InstaKill[0]      | 512x1         | LUT            | 
 +------------+-------------------+---------------+----------------+
 
 ---------------------------------------------------------------------------------
@@ -501,35 +483,48 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |sprites__GB0  |           1|      3474|
+|2     |sprites__GB1  |           1|      2140|
+|3     |sprites__GB2  |           1|      1717|
+|4     |sprites__GB3  |           1|      3722|
+|5     |sprites__GB4  |           1|      3702|
+|6     |top__GC0      |           1|     27859|
++------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5578] Moved timing constraint from pin 'Pre0/clk_25' to pin 'Pre0/bbstub_clk_25/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 1169.051 ; gain = 509.285
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:29 ; elapsed = 00:02:02 . Memory (MB): peak = 1238.754 ; gain = 578.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 1169.051 ; gain = 509.285
+Finished Timing Optimization : Time (s): cpu = 00:01:35 ; elapsed = 00:02:08 . Memory (MB): peak = 1238.754 ; gain = 578.664
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |sprites__GB0  |           1|      3474|
+|2     |sprites__GB1  |           1|      2140|
+|3     |sprites__GB2  |           1|      1717|
+|4     |sprites__GB3  |           1|      3722|
+|5     |sprites__GB4  |           1|      3702|
+|6     |top__GC0      |           1|      9427|
++------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 1169.051 ; gain = 509.285
+Finished Technology Mapping : Time (s): cpu = 00:01:43 ; elapsed = 00:02:16 . Memory (MB): peak = 1251.238 ; gain = 591.148
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -553,7 +548,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:04 . Memory (MB): peak = 1169.051 ; gain = 509.285
+Finished IO Insertion : Time (s): cpu = 00:01:46 ; elapsed = 00:02:19 . Memory (MB): peak = 1255.773 ; gain = 595.684
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -566,7 +561,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:04 . Memory (MB): peak = 1169.051 ; gain = 509.285
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:46 ; elapsed = 00:02:19 . Memory (MB): peak = 1255.773 ; gain = 595.684
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -578,25 +573,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:04 . Memory (MB): peak = 1169.051 ; gain = 509.285
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:48 ; elapsed = 00:02:21 . Memory (MB): peak = 1255.773 ; gain = 595.684
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:04 . Memory (MB): peak = 1169.051 ; gain = 509.285
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:48 ; elapsed = 00:02:21 . Memory (MB): peak = 1255.773 ; gain = 595.684
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:03 ; elapsed = 00:01:04 . Memory (MB): peak = 1169.051 ; gain = 509.285
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:48 ; elapsed = 00:02:21 . Memory (MB): peak = 1255.773 ; gain = 595.684
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:03 ; elapsed = 00:01:04 . Memory (MB): peak = 1169.051 ; gain = 509.285
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:48 ; elapsed = 00:02:21 . Memory (MB): peak = 1255.773 ; gain = 595.684
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -614,54 +609,57 @@ Report Cell Usage:
 |      |Cell               |Count |
 +------+-------------------+------+
 |1     |Prescaler25_bbox_0 |     1|
-|2     |CARRY4             |    34|
-|3     |LUT1               |    12|
-|4     |LUT2               |    62|
-|5     |LUT3               |    45|
-|6     |LUT4               |    58|
-|7     |LUT5               |   151|
-|8     |LUT6               |   437|
-|9     |MUXF7              |    74|
-|10    |MUXF8              |     5|
-|11    |FDCE               |    70|
-|12    |FDRE               |    38|
-|13    |FDSE               |     4|
-|14    |IBUF               |     2|
-|15    |OBUF               |    13|
+|2     |BUFG               |     1|
+|3     |CARRY4             |    50|
+|4     |LUT1               |    13|
+|5     |LUT2               |   105|
+|6     |LUT3               |   828|
+|7     |LUT4               |   145|
+|8     |LUT5               |   212|
+|9     |LUT6               |  2666|
+|10    |MUXF7              |   710|
+|11    |MUXF8              |   227|
+|12    |FDCE               |    70|
+|13    |FDRE               | 12465|
+|14    |FDSE               |     4|
+|15    |IBUF               |     2|
+|16    |OBUF               |    14|
+|17    |OBUFT              |     4|
 +------+-------------------+------+
 
 Report Instance Areas: 
 +------+-----------+--------+------+
 |      |Instance   |Module  |Cells |
 +------+-----------+--------+------+
-|1     |top        |        |  1006|
-|2     |  SP0      |sprites |    10|
-|3     |  VGA0     |VGA     |   901|
-|4     |  receiver |UART_rx |    70|
+|1     |top        |        | 17517|
+|2     |  SP0      |sprites | 16432|
+|3     |  VGA0     |VGA     |   910|
+|4     |  receiver |UART_rx |   144|
 +------+-----------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:04 . Memory (MB): peak = 1169.051 ; gain = 509.285
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:48 ; elapsed = 00:02:21 . Memory (MB): peak = 1255.773 ; gain = 595.684
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:00:56 . Memory (MB): peak = 1169.051 ; gain = 327.418
-Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 1169.051 ; gain = 509.285
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:22 ; elapsed = 00:02:09 . Memory (MB): peak = 1255.773 ; gain = 374.488
+Synthesis Optimization Complete : Time (s): cpu = 00:01:48 ; elapsed = 00:02:22 . Memory (MB): peak = 1255.773 ; gain = 595.684
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 113 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 987 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'top' is not ideal for floorplanning, since the cellview 'sprites' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1169.051 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1271.805 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-236 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
+238 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 1169.051 ; gain = 744.469
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1169.051 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:56 ; elapsed = 00:02:32 . Memory (MB): peak = 1271.805 ; gain = 847.672
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1271.805 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 14 19:14:11 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 17 16:19:29 2022...

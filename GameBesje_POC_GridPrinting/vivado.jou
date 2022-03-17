@@ -2,85 +2,181 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Mar 10 15:34:24 2022
-# Process ID: 14264
+# Start of session at: Wed Mar 16 12:19:16 2022
+# Process ID: 12256
 # Current directory: C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10304 C:\Users\Elwin\Vivado\BESJ-Basys3\GameBesje_POC_GridPrinting\GameBesje.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8380 C:\Users\Elwin\Vivado\BESJ-Basys3\GameBesje_POC_GridPrinting\GameBesje.xpr
 # Log file: C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/vivado.log
 # Journal file: C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.xpr
 update_compile_order -fileset sources_1
-add_files -norecurse C:/Users/Elwin/Downloads/UART_rx.vhd
-update_compile_order -fileset sources_1
-open_hw
-connect_hw_server
-open_hw_target
-set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 12
-wait_on_run impl_1
-close_hw
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 12
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 12
-wait_on_run impl_1
-open_hw
-connect_hw_server
-open_hw_target
-set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 12
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 12
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-update_compile_order -fileset sources_1
 synth_design -rtl -name rtl_1
-place_ports rx H1
-set_property IOSTANDARD LVCMOS33 [get_ports [list rx]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list enLED]]
+place_ports enLED L1
 save_constraints
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 12
 wait_on_run impl_1
-close_design
-close_hw
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_design
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 12
 wait_on_run impl_1
+open_hw
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+refresh_design
+set_property IOSTANDARD LVCMOS33 [get_ports [list {data_out[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {leds[3]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {leds[2]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {leds[1]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {leds[0]}]]
+set_property package_pin "" [get_ports [list  {leds[3]}]]
+place_ports {leds[0]} V13
+place_ports {leds[1]} V3
+place_ports {leds[2]} W3
+place_ports {leds[3]} U3
+save_constraints
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+close_hw
 open_hw
 connect_hw_server
 open_hw_target
 set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
 current_hw_device [get_hw_devices xc7a35t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_design
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+close_design
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property PROGRAM.FILE {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
