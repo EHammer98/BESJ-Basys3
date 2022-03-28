@@ -22,8 +22,7 @@ entity top is
         h_sync: out std_logic;
         v_sync: out std_logic;
         enLED: out std_logic;
-        data_out         : out std_logic_vector (7 downto 0);
-        leds : out std_logic_vector (3 downto 0)
+        avLED : out std_logic
     );
 end Top;
 
@@ -49,9 +48,11 @@ component sprites is
         b1:         in std_logic;
         b2:         in std_logic;
         enSig:      in std_logic;
-        dataIn:     in std_logic_vector(7 downto 0);
+        dataIn:     in std_logic_vector(6 downto 0);
         arrayOut:   out darray
     );
+      
+    
 end component;
 
 component UART_rx
@@ -59,8 +60,10 @@ component UART_rx
         clk            : in  std_logic;
         reset          : in  std_logic;
         enSig         : out std_logic;
+        avSig         : out std_logic;
         rx_data_in     : in  std_logic;
-        rx_data_out    : out std_logic_vector (7 downto 0)
+        rx_audio_out    : out std_logic_vector (6 downto 0);
+        rx_video_out    : out std_logic_vector (6 downto 0)
         );
 end component;
 
@@ -79,8 +82,10 @@ signal tmp_clk25 : std_logic;
 signal tmp_en : std_logic;
 signal tmp_code : integer;
 signal tmp_array : darray;
-signal dataIN : std_logic_vector(7 downto 0);
+signal videoIN : std_logic_vector(6 downto 0);
+signal audioIN : std_logic_vector(6 downto 0);
 signal enSignal : std_logic;
+signal avSignal : std_logic;
 
 begin
 
@@ -98,8 +103,13 @@ SP0: sprites port map (
     b2 => button2,
     enSig => enSignal,
     arrayOut => tmp_array,
-    dataIn => dataIN   
+    dataIn => videoIN   
 );
+
+
+--AU0: audio port map (
+--    dataIn => audioIN   
+--);
 
 receiver: UART_rx
 port map(
@@ -107,7 +117,9 @@ port map(
         reset          => reset,
         rx_data_in     => rx,
         enSig => enSignal,
-        rx_data_out    => dataIN
+        avSig => avSignal,
+        rx_video_out    => videoIN,
+        rx_audio_out    => audioIN
         );
 
 VGA0: VGA port map(
@@ -121,5 +133,6 @@ VGA0: VGA port map(
     vsync => v_sync
 );
 enLED <= enSignal;
-data_out <= dataIN;
+avLED <= avSignal;
+
 end Behavioral;

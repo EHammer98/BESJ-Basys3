@@ -60,12 +60,16 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 3
+  set_param synth.incrementalSynthesisCache C:/Users/Elwin/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-12560-HAMMER-PC-01/incrSyn
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property board_part_repo_paths {C:/Users/Elwin/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store} [current_project]
   set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]

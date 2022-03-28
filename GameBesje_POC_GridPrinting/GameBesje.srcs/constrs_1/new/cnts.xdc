@@ -51,3 +51,6 @@ set_property PACKAGE_PIN V13 [get_ports {leds[0]}]
 set_property PACKAGE_PIN V3 [get_ports {leds[1]}]
 set_property PACKAGE_PIN W3 [get_ports {leds[2]}]
 set_property PACKAGE_PIN U3 [get_ports {leds[3]}]
+
+set_property PACKAGE_PIN W3 [get_ports avLED]
+set_property IOSTANDARD LVCMOS33 [get_ports avLED]

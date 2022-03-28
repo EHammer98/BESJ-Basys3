@@ -21,7 +21,7 @@ entity sprites is
         enable:     in std_logic;
         b1:         in std_logic;
         b2:         in std_logic;
-        dataIn:     in std_logic_vector(7 downto 0);
+        dataIn:     in std_logic_vector(6 downto 0);
         enSig:      in std_logic;
         arrayOut:   out darray
     );

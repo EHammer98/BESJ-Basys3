@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Thu Mar 17 16:21:33 2022
+| Date             : Sun Mar 27 17:48:38 2022
 | Host             : HAMMER-PC-01 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -53,16 +53,16 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.009 |        5 |       --- |             --- |
-| Slice Logic    |     0.012 |    17501 |       --- |             --- |
-|   LUT as Logic |     0.012 |     3460 |     20800 |           16.63 |
+| Slice Logic    |     0.012 |    15587 |       --- |             --- |
+|   LUT as Logic |     0.011 |     3243 |     20800 |           15.59 |
 |   CARRY4       |    <0.001 |       50 |      8150 |            0.61 |
-|   Register     |    <0.001 |    12539 |     41600 |           30.14 |
-|   F7/F8 Muxes  |    <0.001 |      937 |     32600 |            2.87 |
+|   Register     |    <0.001 |    11000 |     41600 |           26.44 |
+|   F7/F8 Muxes  |    <0.001 |      787 |     32600 |            2.41 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       10 |       --- |             --- |
-| Signals        |     0.017 |    15505 |       --- |             --- |
+|   Others       |     0.000 |        9 |       --- |             --- |
+| Signals        |     0.018 |    13896 |       --- |             --- |
 | MMCM           |     0.116 |        1 |         5 |           20.00 |
-| I/O            |    <0.001 |       21 |       106 |           19.81 |
+| I/O            |    <0.001 |       10 |       106 |            9.43 |
 | Static Power   |     0.072 |          |           |                 |
 | Total          |     0.227 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
@@ -148,9 +148,9 @@ Table of Contents
 | top        |     0.155 |
 |   Pre0     |     0.116 |
 |     inst   |     0.116 |
-|   SP0      |     0.027 |
+|   SP0      |     0.028 |
 |   VGA0     |     0.009 |
-|   receiver |     0.001 |
+|   receiver |     0.002 |
 +------------+-----------+
 
 

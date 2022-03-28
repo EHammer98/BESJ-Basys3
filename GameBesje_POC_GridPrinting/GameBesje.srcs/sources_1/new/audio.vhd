@@ -32,7 +32,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity audio is
---  Port ( );
+  Port ( 
+  dataIn:     in std_logic_vector(6 downto 0)
+  );
 end audio;
 
 architecture Behavioral of audio is
