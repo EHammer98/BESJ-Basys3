@@ -1460,7 +1460,7 @@ begin
                     ColoursIn := BorderLeft(location);
                 when 51 =>
                     ColoursIn := BorderRight(location);
-                when 51 =>
+                when 52 =>
                     ColoursIn := BorderBottom(location);
                 when others =>
                     ColoursIn := "000";

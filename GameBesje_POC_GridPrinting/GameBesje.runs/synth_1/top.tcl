@@ -17,31 +17,31 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/Jomme/Downloads/Project_Besje_voorJomme/Project_Besje/GameBesje/GameBesje.cache/wt [current_project]
-set_property parent.project_path C:/Users/Jomme/Downloads/Project_Besje_voorJomme/Project_Besje/GameBesje/GameBesje.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.cache/wt [current_project]
+set_property parent.project_path C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
+set_property board_part_repo_paths {C:/Users/Elwin/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store} [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_output_repo c:/Users/Jomme/Downloads/Project_Besje_voorJomme/Project_Besje/GameBesje/GameBesje.cache/ip [current_project]
+set_property ip_output_repo c:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  C:/Users/Jomme/Downloads/Project_Besje_voorJomme/Project_Besje/GameBesje/GameBesje.srcs/sources_1/new/sprites.vhd
-  {C:/Users/Jomme/Downloads/Project_Besje_voorJomme/Project_Besje/GameBesje/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd}
-  C:/Users/Jomme/Downloads/Project_Besje_voorJomme/Project_Besje/GameBesje/GameBesje.srcs/sources_1/new/top.vhd
+  C:/Users/Elwin/Downloads/UART_rx.vhd
+  C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/sprites.vhd
+  {C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd}
+  C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/new/top.vhd
 }
-read_ip -quiet C:/Users/Jomme/Downloads/Project_Besje_voorJomme/Project_Besje/GameBesje/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25.xci
-set_property used_in_implementation false [get_files -all c:/Users/Jomme/Downloads/Project_Besje_voorJomme/Project_Besje/GameBesje/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Jomme/Downloads/Project_Besje_voorJomme/Project_Besje/GameBesje/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Jomme/Downloads/Project_Besje_voorJomme/Project_Besje/GameBesje/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25_ooc.xdc]
+read_ip -quiet C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25.xci
+set_property used_in_implementation false [get_files -all c:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -51,8 +51,8 @@ set_property used_in_implementation false [get_files -all c:/Users/Jomme/Downloa
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/Jomme/Downloads/Project_Besje_voorJomme/Project_Besje/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc
-set_property used_in_implementation false [get_files C:/Users/Jomme/Downloads/Project_Besje_voorJomme/Project_Besje/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc]
+read_xdc C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/constrs_1/new/cnts.xdc
+set_property used_in_implementation false [get_files C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.srcs/constrs_1/new/cnts.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

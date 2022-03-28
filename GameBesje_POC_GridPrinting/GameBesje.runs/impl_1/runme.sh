@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Jomme/Downloads/Project_Besje_voorJomme/Project_Besje/GameBesje/GameBesje.runs/impl_1'
+HD_PWD='C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

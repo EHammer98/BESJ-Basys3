@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Mar  9 14:33:10 2022
-| Host         : INTRASUM10 running 64-bit major release  (build 9200)
+| Date         : Thu Mar 17 16:20:41 2022
+| Host         : HAMMER-PC-01 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
 | Device       : xc7a35t
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     5 |
-|    Minimum number of control sets                        |     5 |
+| Total control sets                                       |   781 |
+|    Minimum number of control sets                        |   781 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    26 |
+| Unused register locations in slices containing registers |    45 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     5 |
-| >= 0 to < 4        |     2 |
-| >= 4 to < 6        |     0 |
+| Total control sets |   781 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     0 |
+| >= 8 to < 10       |   769 |
 | >= 10 to < 12      |     1 |
 | >= 12 to < 14      |     1 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     1 |
+| >= 16              |     6 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,26 +58,802 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               0 |            0 |
-| No           | No                    | Yes                    |              13 |            8 |
-| No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              55 |           24 |
-| Yes          | Yes                   | No                     |               2 |            2 |
+| No           | No                    | No                     |            6153 |         1534 |
+| No           | No                    | Yes                    |              13 |            7 |
+| No           | Yes                   | No                     |              55 |           15 |
+| Yes          | No                    | No                     |            6144 |         2332 |
+| Yes          | No                    | Yes                    |              57 |           23 |
+| Yes          | Yes                   | No                     |             117 |           33 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------+--------------------------+------------------+------------------+----------------+
-|    Clock Signal   |       Enable Signal      | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+-------------------+--------------------------+------------------+------------------+----------------+
-|  Pre0/inst/clk_25 | VGA0/p_0_in              | VGA0/hsync0      |                1 |              1 |
-|  Pre0/inst/clk_25 | VGA0/p_0_in              | VGA0/vsync0      |                1 |              1 |
-|  Pre0/inst/clk_25 | VGA0/vcount[9]_i_1_n_0   | reset_IBUF       |                5 |             10 |
-|  Pre0/inst/clk_25 |                          | reset_IBUF       |                8 |             13 |
-|  Pre0/inst/clk_25 | VGA0/location[8]_i_1_n_0 | reset_IBUF       |               19 |             45 |
-+-------------------+--------------------------+------------------+------------------+----------------+
++-------------------+----------------------------------------+--------------------+------------------+----------------+
+|    Clock Signal   |              Enable Signal             |  Set/Reset Signal  | Slice Load Count | Bel Load Count |
++-------------------+----------------------------------------+--------------------+------------------+----------------+
+|  clk_IBUF_BUFG    |                                        |                    |                1 |              1 |
+|  Pre0/inst/clk_25 | VGA0/p_0_in                            | VGA0/hsync_i_1_n_0 |                1 |              1 |
+|  Pre0/inst/clk_25 | VGA0/p_0_in                            | VGA0/vsync_i_1_n_0 |                1 |              1 |
+|  clk_IBUF_BUFG    | receiver/bit_duration_count[3]_i_1_n_0 | reset_IBUF         |                1 |              4 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,17]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,9]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  |                                        |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,15]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,18]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,13]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,11]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,19]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,20]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,23]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,12]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,1]                |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,8]                |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,9]                |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,4]                |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,0]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,16]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,14]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,17]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,21]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,2]                |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,7]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,5]                |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,22]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,6]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,3]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[5,10]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,13]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,1]                |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,20]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,21]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,4]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,5]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,0]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,18]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,19]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,23]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,6]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,11]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,14]               |                    |                7 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,15]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,10]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,17]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,12]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,16]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,22]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,2]                |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,3]                |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,7]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,8]                |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[6,9]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,0]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,10]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,11]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,19]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,6]                |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,3]                |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,14]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,18]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,5]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,21]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,9]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,1]                |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,7]                |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,22]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,12]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,23]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,16]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,15]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,17]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,13]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,2]                |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,4]                |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,20]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[7,8]                |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,16]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,20]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,9]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,4]                |                    |                7 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,23]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,11]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,15]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,10]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,7]                |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,17]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,5]                |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,8]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,22]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,2]                |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,18]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,13]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,0]                |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,19]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,6]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,21]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,14]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,3]                |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,1]                |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[8,12]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,0]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,11]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,13]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,12]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,15]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,18]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,1]                |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,20]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,21]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,22]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,2]                |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,19]               |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,10]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,17]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,23]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,3]                |                    |                7 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,16]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,4]                |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,14]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,8]                |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,9]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,7]                |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,6]                |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[9,5]                |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,16]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,0]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,12]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,4]                |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,6]                |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,8]                |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,9]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,18]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,21]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,11]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,22]               |                    |                7 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,13]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,1]                |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,20]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,15]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,3]                |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,17]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,19]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,14]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,2]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,5]                |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,10]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,7]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[2,23]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,10]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,11]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,13]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,14]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,16]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,18]              |                    |                7 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,19]              |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,1]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,20]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,21]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,22]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,2]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,3]               |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,4]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,5]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,6]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,7]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,8]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,9]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,23]              |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,15]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,0]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,12]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[20,17]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,0]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,16]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,19]              |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,14]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,18]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,20]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,3]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,2]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,7]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,21]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,5]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,13]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,4]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,23]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,9]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,15]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,6]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,17]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,22]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,11]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,10]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,12]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,8]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[21,1]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,0]               |                    |                7 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,14]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,19]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,22]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,17]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,2]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,9]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,4]               |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,13]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,16]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,15]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,1]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,21]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,5]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,23]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,7]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,20]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,11]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,18]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,12]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,3]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,6]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,8]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[22,10]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,10]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,12]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,14]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,15]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,16]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,18]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,19]              |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,20]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,21]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,22]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,23]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,17]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,2]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,1]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,0]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,11]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,13]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,9]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,4]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,6]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,3]               |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,5]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,8]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[23,7]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,3]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,13]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,22]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,2]               |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,5]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,15]              |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,1]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,9]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,14]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,21]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,8]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,18]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,10]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,12]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,0]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,11]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,17]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,7]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,4]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,19]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,23]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,6]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,20]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[24,16]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,14]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,2]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,6]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,20]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,3]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,7]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,0]               |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,22]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,15]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,1]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,23]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,18]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,10]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,5]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,13]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,16]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,8]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,12]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,4]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,9]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,11]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,17]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,19]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[25,21]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,0]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,10]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,12]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,13]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,15]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,16]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,17]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,11]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,14]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,2]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,4]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,6]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,9]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,7]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,5]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,20]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,18]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,1]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,8]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,3]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,21]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,22]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,23]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[26,19]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,0]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,10]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,11]              |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,12]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,13]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,14]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,8]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,16]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,20]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,1]               |                    |                8 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,2]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,17]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,21]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,19]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,7]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,9]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,6]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,18]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,22]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,4]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,5]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,15]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,3]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[27,23]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,23]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,4]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,10]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,0]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,14]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,19]              |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,5]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,7]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,3]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,13]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,22]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,1]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,17]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,9]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,16]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,2]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,15]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,6]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,20]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,18]              |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,8]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,11]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,12]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[28,21]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,10]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,12]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,2]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,0]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,4]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,15]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,5]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,14]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,13]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,21]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,23]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,6]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,3]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,7]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,17]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,1]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,18]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,19]              |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,11]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,16]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,20]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,22]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,8]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[29,9]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,21]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,6]                |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,7]                |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,17]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,13]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,4]                |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,18]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,12]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,23]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,0]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,14]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,8]                |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,11]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,1]                |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,19]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,16]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,3]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,15]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,22]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,2]                |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,20]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,5]                |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,9]                |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[3,10]               |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,11]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,10]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,21]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,4]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,8]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,17]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,18]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,12]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,3]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,15]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,7]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,9]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,16]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,20]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,6]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,23]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,14]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,1]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,0]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,2]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,22]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,13]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,19]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[30,5]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,15]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,0]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,11]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,12]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,14]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,16]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,17]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,18]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,13]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,1]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,20]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,21]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,19]              |                    |                7 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,10]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,2]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,4]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,5]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,22]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,23]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,6]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,3]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,8]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,9]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[31,7]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,13]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,14]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,19]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,8]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,15]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,11]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,21]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,18]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,17]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,1]                |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,10]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,23]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,2]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,4]                |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,5]                |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,20]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,16]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,6]                |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,3]                |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,0]                |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,9]                |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,22]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,12]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[4,7]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,3]               |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,16]              |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,8]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,13]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,19]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,21]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,20]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,4]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,0]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,10]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,11]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,14]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,17]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,18]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,1]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,22]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,23]              |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,15]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,5]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,2]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,6]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,7]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,9]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[12,12]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,10]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,11]              |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,12]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,0]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,14]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,13]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,8]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,15]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,22]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,23]              |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,3]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,21]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,19]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,9]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,17]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,1]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,20]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,4]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,2]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,7]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,16]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,6]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,18]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[13,5]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,10]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,15]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,18]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,12]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,13]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,1]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,2]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,9]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,16]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,19]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,0]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,11]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,17]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,20]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,22]              |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,14]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,4]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,5]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,6]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,7]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,21]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,8]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,3]               |                    |                7 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[14,23]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,14]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,21]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,18]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,17]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,2]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,11]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,13]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,15]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,22]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,23]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,4]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,5]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,16]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,10]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,0]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,20]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,12]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,19]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,3]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,1]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,6]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,7]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,9]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[15,8]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,21]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,20]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,11]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,14]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,2]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,3]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,0]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,13]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,5]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,22]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,18]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,1]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,6]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,10]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,4]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,23]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,8]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,19]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,17]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,12]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,16]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,7]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,9]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[16,15]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,19]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,18]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,23]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,10]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,13]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,12]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,15]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,5]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,4]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,1]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,8]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,9]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,7]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,2]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,21]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,3]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,16]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,17]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,0]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,20]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,11]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,22]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,14]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[17,6]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,13]              |                    |                7 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,1]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,12]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,0]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,11]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,14]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,15]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,16]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,18]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,10]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,17]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,19]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,7]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,22]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,8]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,20]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,23]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,21]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,2]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,4]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,3]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,6]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,5]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[18,9]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,21]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,16]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,9]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,23]              |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,14]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,15]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,19]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,18]              |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,13]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,7]               |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,3]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,4]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,0]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,20]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,2]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,5]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,11]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,6]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,1]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,12]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,22]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,8]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,10]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[19,17]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,17]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,0]                |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,10]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,23]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,12]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,3]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,1]                |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,8]                |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,2]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,9]                |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,20]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,4]                |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,13]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,14]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,11]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,15]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,5]                |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,16]               |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,7]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,18]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,22]               |                    |                7 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,19]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,21]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[0,6]                |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,0]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,11]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,16]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,13]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,22]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,17]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,15]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,12]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,10]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,19]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,18]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,1]                |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,20]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,21]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,14]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,2]                |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,4]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,3]                |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,7]                |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,6]                |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,23]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,9]                |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,5]                |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[1,8]                |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,13]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,8]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,9]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,16]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,0]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,14]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,5]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,21]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,2]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,1]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,22]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,23]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,15]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,17]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,3]               |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,6]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,7]               |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,4]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,20]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,18]              |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,19]              |                    |                6 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,10]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,12]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[10,11]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,10]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,11]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,13]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,0]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,15]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,16]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,18]              |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,12]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,19]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,1]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,20]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,22]              |                    |                4 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,23]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,2]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,3]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,4]               |                    |                1 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,5]               |                    |                5 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,21]              |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,14]              |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,6]               |                    |                2 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,7]               |                    |                3 |              8 |
+|  enLED_OBUF_BUFG  | SP0/conf_array_reg[11,8]               |                    |                2 |              8 |
+|  Pre0/inst/clk_25 | VGA0/vcount[9]_i_1_n_0                 | reset_IBUF         |                5 |             10 |
+|  Pre0/inst/clk_25 |                                        | reset_IBUF         |                7 |             13 |
+|  clk_IBUF_BUFG    |                                        | reset_IBUF         |                7 |             20 |
+|  enLED_OBUF_BUFG  | SP0/y                                  | SP0/y[31]_i_1_n_0  |                8 |             31 |
+|  enLED_OBUF_BUFG  |                                        | SP0/y              |                8 |             35 |
+|  Pre0/inst/clk_25 | VGA0/location[8]_i_1_n_0               | reset_IBUF         |               18 |             47 |
+|  clk_IBUF_BUFG    | receiver/rx_data_out[7]_i_1_n_0        | reset_IBUF         |               22 |             80 |
+|  Pre0/inst/clk_25 |                                        |                    |             1530 |           6144 |
++-------------------+----------------------------------------+--------------------+------------------+----------------+
 
 

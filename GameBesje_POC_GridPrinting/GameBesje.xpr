@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="40" Path="C:/Users/Jomme/besje/Workspace/GameBesje_POC_GridPrinting/GameBesje_POC_GridPrinting/GameBesje.xpr">
+<Project Version="7" Minor="40" Path="C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="2245162cff234afa874e596afe6d411b"/>
@@ -61,6 +61,12 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PPRDIR/../../../Downloads/UART_rx.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/new/sprites.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>

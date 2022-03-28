@@ -15,11 +15,15 @@ entity top is
     Port( 
         clk :   in std_logic;
         reset:  in std_logic;
+        rx:  in std_logic;
         button1: in std_logic;
         button2: in std_logic;
         colours: out std_logic_vector(2 downto 0) := (others => '0');
         h_sync: out std_logic;
-        v_sync: out std_logic
+        v_sync: out std_logic;
+        enLED: out std_logic;
+        data_out         : out std_logic_vector (7 downto 0);
+        leds : out std_logic_vector (3 downto 0)
     );
 end Top;
 
@@ -44,8 +48,20 @@ component sprites is
         enable:     in std_logic;
         b1:         in std_logic;
         b2:         in std_logic;
+        enSig:      in std_logic;
+        dataIn:     in std_logic_vector(7 downto 0);
         arrayOut:   out darray
     );
+end component;
+
+component UART_rx
+    port(
+        clk            : in  std_logic;
+        reset          : in  std_logic;
+        enSig         : out std_logic;
+        rx_data_in     : in  std_logic;
+        rx_data_out    : out std_logic_vector (7 downto 0)
+        );
 end component;
 
 component Prescaler25 is
@@ -63,6 +79,8 @@ signal tmp_clk25 : std_logic;
 signal tmp_en : std_logic;
 signal tmp_code : integer;
 signal tmp_array : darray;
+signal dataIN : std_logic_vector(7 downto 0);
+signal enSignal : std_logic;
 
 begin
 
@@ -78,8 +96,19 @@ SP0: sprites port map (
     enable => tmp_en,
     b1 => button1,
     b2 => button2,
-    arrayOut => tmp_array
+    enSig => enSignal,
+    arrayOut => tmp_array,
+    dataIn => dataIN   
 );
+
+receiver: UART_rx
+port map(
+        clk            => clk,
+        reset          => reset,
+        rx_data_in     => rx,
+        enSig => enSignal,
+        rx_data_out    => dataIN
+        );
 
 VGA0: VGA port map(
     clk25 => tmp_clk25,
@@ -91,5 +120,6 @@ VGA0: VGA port map(
     hsync => h_sync,
     vsync => v_sync
 );
-
+enLED <= enSignal;
+data_out <= dataIN;
 end Behavioral;
