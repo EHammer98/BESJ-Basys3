@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Mar 29 10:31:13 2022
+# Process ID: 9208
+# Current directory: C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7300 C:\Users\Elwin\Documents\GitHub\BESJ-Basys3\GameBesje\GameBesje.xpr
+# Log file: C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/vivado.log
+# Journal file: C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_run impl_1
+file copy -force C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.runs/impl_1/top.bit C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/Bitje.bit
+close_design
+synth_design -rtl -name rtl_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list {colours[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {d[6]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {d[5]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {d[4]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {d[3]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {d[2]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {d[1]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {d[0]}]]
+place_ports {d[6]} U14
+place_ports {d[5]} U15
+place_ports {d[4]} W18
+place_ports {d[3]} V19
+place_ports {d[2]} U19
+place_ports {d[1]} E19
+place_ports {d[0]} U16
+save_constraints
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw
+file copy -force C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.runs/impl_1/top.bit C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/Bitje.bit
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.runs/impl_1/top.bit C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/BitjeSlow.bit

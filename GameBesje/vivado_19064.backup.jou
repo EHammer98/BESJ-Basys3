@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Mar 28 22:06:58 2022
+# Process ID: 19064
+# Current directory: C:/Users/Elwin/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18808
+# Log file: C:/Users/Elwin/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/Elwin/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting/GameBesje.xpr
+update_compile_order -fileset sources_1
+archive_project C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje.xpr.zip -temp_dir C:/Users/Elwin/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-19064-HAMMER-PC-01 -force -include_local_ip_cache -include_config_settings
