@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Apr  6 15:32:03 2022
+| Date         : Thu Apr  7 13:58:25 2022
 | Host         : DESKTOP-2II8BHC running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     7 |
-|    Minimum number of control sets                        |     7 |
+| Total control sets                                       |    14 |
+|    Minimum number of control sets                        |    14 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    34 |
+| Unused register locations in slices containing registers |    60 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     7 |
-| >= 0 to < 4        |     2 |
+| Total control sets |    14 |
+| >= 0 to < 4        |     4 |
 | >= 4 to < 6        |     1 |
-| >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     1 |
-| >= 10 to < 12      |     2 |
-| >= 12 to < 14      |     0 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     1 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     1 |
+| >= 16              |     6 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,28 +58,35 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               0 |            0 |
-| No           | No                    | Yes                    |              10 |            3 |
-| No           | Yes                   | No                     |              20 |            6 |
-| Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              10 |            4 |
-| Yes          | Yes                   | No                     |              14 |            7 |
+| No           | No                    | No                     |               2 |            2 |
+| No           | No                    | Yes                    |              13 |            9 |
+| No           | Yes                   | No                     |              20 |            8 |
+| Yes          | No                    | No                     |           10818 |         3057 |
+| Yes          | No                    | Yes                    |              57 |           21 |
+| Yes          | Yes                   | No                     |              78 |           21 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------+----------------------------------------+--------------------+------------------+----------------+
-|    Clock Signal   |              Enable Signal             |  Set/Reset Signal  | Slice Load Count | Bel Load Count |
-+-------------------+----------------------------------------+--------------------+------------------+----------------+
-|  Pre0/inst/clk_25 | VGA0/p_0_in                            | VGA0/hsync_i_1_n_0 |                1 |              1 |
-|  Pre0/inst/clk_25 | VGA0/p_0_in                            | VGA0/vsync_i_1_n_0 |                1 |              1 |
-|  clk_IBUF_BUFG    | receiver/bit_duration_count[3]_i_1_n_0 | reset_IBUF         |                1 |              4 |
-|  clk_IBUF_BUFG    | receiver/rx_video_out[7]_i_1_n_0       | reset_IBUF         |                4 |              8 |
-|  Pre0/inst/clk_25 |                                        | reset_IBUF         |                3 |             10 |
-|  Pre0/inst/clk_25 | VGA0/vcount[9]_i_1_n_0                 | reset_IBUF         |                4 |             10 |
-|  clk_IBUF_BUFG    |                                        | reset_IBUF         |                6 |             20 |
-+-------------------+----------------------------------------+--------------------+------------------+----------------+
++-------------------+-------------------------------------------+------------------------+------------------+----------------+
+|    Clock Signal   |               Enable Signal               |    Set/Reset Signal    | Slice Load Count | Bel Load Count |
++-------------------+-------------------------------------------+------------------------+------------------+----------------+
+|  clk_IBUF_BUFG    |                                           |                        |                1 |              1 |
+|  Pre0/inst/clk_25 |                                           |                        |                1 |              1 |
+|  Pre0/inst/clk_25 | VGA0/p_0_in                               | VGA0/vsync_i_1_n_0     |                1 |              1 |
+|  Pre0/inst/clk_25 | VGA0/p_0_in                               | VGA0/hsync_i_1_n_0     |                1 |              1 |
+|  clk_IBUF_BUFG    | receiver/bit_duration_count[3]_i_1_n_0    | reset_IBUF             |                2 |              4 |
+|  clk_IBUF_BUFG    | receiver/rx_video_out[6]_i_1_n_0          | reset_IBUF             |                1 |              7 |
+|  Pre0/inst/clk_25 | VGA0/vcount[9]_i_1_n_0                    | reset_IBUF             |                4 |             10 |
+|  Pre0/inst/clk_25 |                                           | reset_IBUF             |                9 |             13 |
+|  clk_IBUF_BUFG    |                                           | reset_IBUF             |                8 |             20 |
+|  clk_IBUF_BUFG    | receiver/FSM_sequential_rx_state_reg[0]_0 | receiver/x[31]_i_1_n_0 |                8 |             31 |
+|  clk_IBUF_BUFG    | receiver/y[31]_i_2_n_0                    | receiver/y[31]_i_1_n_0 |                8 |             34 |
+|  Pre0/inst/clk_25 | VGA0/location[8]_i_1_n_0                  | reset_IBUF             |               17 |             47 |
+|  clk_IBUF_BUFG    | VGA0/E[0]                                 |                        |             1450 |           5376 |
+|  clk_IBUF_BUFG    | receiver/FSM_sequential_rx_state_reg[0]_0 |                        |             1607 |           5442 |
++-------------------+-------------------------------------------+------------------------+------------------+----------------+
 
 

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Apr  6 15:31:23 2022
+| Date         : Thu Apr  7 13:56:54 2022
 | Host         : DESKTOP-2II8BHC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -27,18 +27,18 @@ Table of Contents
 1. Slice Logic
 --------------
 
-+-------------------------+------+-------+-----------+-------+
-|        Site Type        | Used | Fixed | Available | Util% |
-+-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   59 |     0 |     20800 |  0.28 |
-|   LUT as Logic          |   59 |     0 |     20800 |  0.28 |
-|   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |   54 |     0 |     41600 |  0.13 |
-|   Register as Flip Flop |   54 |     0 |     41600 |  0.13 |
-|   Register as Latch     |    0 |     0 |     41600 |  0.00 |
-| F7 Muxes                |    0 |     0 |     16300 |  0.00 |
-| F8 Muxes                |    0 |     0 |      8150 |  0.00 |
-+-------------------------+------+-------+-----------+-------+
++-------------------------+-------+-------+-----------+-------+
+|        Site Type        |  Used | Fixed | Available | Util% |
++-------------------------+-------+-------+-----------+-------+
+| Slice LUTs*             |  9119 |     0 |     20800 | 43.84 |
+|   LUT as Logic          |  9119 |     0 |     20800 | 43.84 |
+|   LUT as Memory         |     0 |     0 |      9600 |  0.00 |
+| Slice Registers         | 10988 |     0 |     41600 | 26.41 |
+|   Register as Flip Flop | 10988 |     0 |     41600 | 26.41 |
+|   Register as Latch     |     0 |     0 |     41600 |  0.00 |
+| F7 Muxes                |   711 |     0 |     16300 |  4.36 |
+| F8 Muxes                |   191 |     0 |      8150 |  2.34 |
++-------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
@@ -55,9 +55,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 20    |          Yes |           - |        Reset |
+| 70    |          Yes |           - |        Reset |
 | 4     |          Yes |         Set |            - |
-| 30    |          Yes |       Reset |            - |
+| 10914 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   18 |     0 |       106 | 16.98 |
+| Bonded IOB                  |   17 |     0 |       106 | 16.04 |
 | Bonded IPADs                |    0 |     0 |        10 |  0.00 |
 | Bonded OPADs                |    0 |     0 |         4 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         5 |  0.00 |
@@ -146,22 +146,25 @@ Table of Contents
 7. Primitives
 -------------
 
-+----------+------+---------------------+
-| Ref Name | Used | Functional Category |
-+----------+------+---------------------+
-| LUT6     |   37 |                 LUT |
-| FDRE     |   30 |        Flop & Latch |
-| FDCE     |   20 |        Flop & Latch |
-| LUT5     |   14 |                 LUT |
-| OBUF     |   13 |                  IO |
-| LUT4     |    6 |                 LUT |
-| LUT3     |    6 |                 LUT |
-| LUT2     |    5 |                 LUT |
-| FDSE     |    4 |        Flop & Latch |
-| IBUF     |    3 |                  IO |
-| OBUFT    |    2 |                  IO |
-| LUT1     |    2 |                 LUT |
-+----------+------+---------------------+
++----------+-------+---------------------+
+| Ref Name |  Used | Functional Category |
++----------+-------+---------------------+
+| FDRE     | 10914 |        Flop & Latch |
+| LUT6     |  7985 |                 LUT |
+| LUT3     |  1200 |                 LUT |
+| MUXF7    |   711 |               MuxFx |
+| LUT4     |   392 |                 LUT |
+| LUT5     |   193 |                 LUT |
+| MUXF8    |   191 |               MuxFx |
+| LUT2     |   136 |                 LUT |
+| FDCE     |    70 |        Flop & Latch |
+| CARRY4   |    50 |          CarryLogic |
+| OBUF     |    13 |                  IO |
+| LUT1     |     9 |                 LUT |
+| FDSE     |     4 |        Flop & Latch |
+| IBUF     |     3 |                  IO |
+| OBUFT    |     1 |                  IO |
++----------+-------+---------------------+
 
 
 8. Black Boxes

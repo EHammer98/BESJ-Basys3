@@ -37,7 +37,6 @@ set_property ip_output_repo c:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesj
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/imports/Downloads/UART_rx.vhd
-  C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/new/sprites.vhd
   {C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd}
   C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/new/top.vhd
 }

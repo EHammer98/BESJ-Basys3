@@ -50,8 +50,8 @@ begin
         if enSig'event and enSig = '1' then
             s := data;
             conf_array(x,y) := s;
-            if (x = 32) then
-                if (y = 24) then
+            if (x = 31) then
+                if (y = 23) then
                     y := 0;
                     
                 else
@@ -65,9 +65,8 @@ begin
       end if;
       
      if rising_edge(clk25) then  
-    
-    
-     arrayOut <= conf_array;
+     
+        arrayOut <= conf_array;
     end if; 
     end process;
 end Behavioral;
