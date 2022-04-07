@@ -15,31 +15,38 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8700 
+INFO: Helper process launched with PID 10120 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 711.441 ; gain = 176.840
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 712.195 ; gain = 177.613
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/new/top.vhd:30]
-INFO: [Synth 8-3491] module 'Prescaler25' declared at 'C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.runs/synth_1/.Xil/Vivado-336-DESKTOP-2II8BHC/realtime/Prescaler25_stub.vhdl:5' bound to instance 'Pre0' of component 'Prescaler25' [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/new/top.vhd:79]
-INFO: [Synth 8-638] synthesizing module 'Prescaler25' [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.runs/synth_1/.Xil/Vivado-336-DESKTOP-2II8BHC/realtime/Prescaler25_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'UART_rx' declared at 'C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/imports/Downloads/UART_rx.vhd:18' bound to instance 'receiver' of component 'UART_rx' [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/new/top.vhd:90]
-INFO: [Synth 8-638] synthesizing module 'UART_rx' [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/imports/Downloads/UART_rx.vhd:36]
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/new/top.vhd:32]
+INFO: [Synth 8-3491] module 'Prescaler25' declared at 'C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.runs/synth_1/.Xil/Vivado-4672-DESKTOP-2II8BHC/realtime/Prescaler25_stub.vhdl:5' bound to instance 'Pre0' of component 'Prescaler25' [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/new/top.vhd:99]
+INFO: [Synth 8-638] synthesizing module 'Prescaler25' [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.runs/synth_1/.Xil/Vivado-4672-DESKTOP-2II8BHC/realtime/Prescaler25_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'sprites' declared at 'C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/new/sprites.vhd:17' bound to instance 'SP0' of component 'sprites' [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/new/top.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'sprites' [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/new/sprites.vhd:33]
+WARNING: [Synth 8-614] signal 'enSig' is read in the process but is not in the sensitivity list [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/new/sprites.vhd:40]
+WARNING: [Synth 8-614] signal 'vgaEN' is read in the process but is not in the sensitivity list [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/new/sprites.vhd:40]
+WARNING: [Synth 8-6014] Unused sequential element s_reg was removed.  [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/new/sprites.vhd:57]
+WARNING: [Synth 8-3848] Net enArrayOut in module/entity sprites does not have driver. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/new/sprites.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'sprites' (1#1) [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/new/sprites.vhd:33]
+INFO: [Synth 8-3491] module 'UART_rx' declared at 'C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/imports/Downloads/UART_rx.vhd:7' bound to instance 'receiver' of component 'UART_rx' [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/new/top.vhd:130]
+INFO: [Synth 8-638] synthesizing module 'UART_rx' [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/imports/Downloads/UART_rx.vhd:24]
 	Parameter BAUD_X16_CLK_TICKS bound to: 54 - type: integer 
-INFO: [Synth 8-226] default block is never used [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/imports/Downloads/UART_rx.vhd:109]
-WARNING: [Synth 8-6014] Unused sequential element s_reg was removed.  [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/imports/Downloads/UART_rx.vhd:165]
-WARNING: [Synth 8-6014] Unused sequential element gridDone_reg was removed.  [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/imports/Downloads/UART_rx.vhd:171]
-WARNING: [Synth 8-3848] Net rx_audio_out in module/entity UART_rx does not have driver. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/imports/Downloads/UART_rx.vhd:30]
-INFO: [Synth 8-256] done synthesizing module 'UART_rx' (1#1) [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/imports/Downloads/UART_rx.vhd:36]
-INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:17' bound to instance 'VGA0' of component 'VGA' [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/new/top.vhd:102]
-INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:28]
-WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:1333]
-WARNING: [Synth 8-6014] Unused sequential element tempX_reg was removed.  [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:1351]
-WARNING: [Synth 8-6014] Unused sequential element tempY_reg was removed.  [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:1352]
-WARNING: [Synth 8-6014] Unused sequential element code_reg was removed.  [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:1356]
-WARNING: [Synth 8-6014] Unused sequential element ColoursIn_reg was removed.  [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:1360]
-INFO: [Synth 8-256] done synthesizing module 'VGA' (2#1) [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:28]
-WARNING: [Synth 8-3848] Net enLED in module/entity top does not have driver. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/new/top.vhd:24]
-INFO: [Synth 8-256] done synthesizing module 'top' (3#1) [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/new/top.vhd:30]
+INFO: [Synth 8-226] default block is never used [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/imports/Downloads/UART_rx.vhd:80]
+WARNING: [Synth 8-3848] Net avSig in module/entity UART_rx does not have driver. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/imports/Downloads/UART_rx.vhd:16]
+WARNING: [Synth 8-3848] Net rx_audio_out in module/entity UART_rx does not have driver. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/imports/Downloads/UART_rx.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'UART_rx' (2#1) [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/imports/Downloads/UART_rx.vhd:24]
+INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:17' bound to instance 'VGA0' of component 'VGA' [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/new/top.vhd:141]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:28]
+WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:1333]
+WARNING: [Synth 8-6014] Unused sequential element tempX_reg was removed.  [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:1351]
+WARNING: [Synth 8-6014] Unused sequential element tempY_reg was removed.  [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:1352]
+WARNING: [Synth 8-6014] Unused sequential element code_reg was removed.  [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:1356]
+WARNING: [Synth 8-6014] Unused sequential element ColoursIn_reg was removed.  [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:1360]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (3#1) [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd:28]
+WARNING: [Synth 8-3848] Net tmp_en in module/entity top does not have driver. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/new/top.vhd:88]
+INFO: [Synth 8-256] done synthesizing module 'top' (4#1) [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/new/top.vhd:32]
+WARNING: [Synth 8-3331] design UART_rx has unconnected port avSig
 WARNING: [Synth 8-3331] design UART_rx has unconnected port rx_audio_out[6]
 WARNING: [Synth 8-3331] design UART_rx has unconnected port rx_audio_out[5]
 WARNING: [Synth 8-3331] design UART_rx has unconnected port rx_audio_out[4]
@@ -47,11 +54,14 @@ WARNING: [Synth 8-3331] design UART_rx has unconnected port rx_audio_out[3]
 WARNING: [Synth 8-3331] design UART_rx has unconnected port rx_audio_out[2]
 WARNING: [Synth 8-3331] design UART_rx has unconnected port rx_audio_out[1]
 WARNING: [Synth 8-3331] design UART_rx has unconnected port rx_audio_out[0]
-WARNING: [Synth 8-3331] design top has unconnected port enLED
-WARNING: [Synth 8-3331] design top has unconnected port button1
-WARNING: [Synth 8-3331] design top has unconnected port button2
+WARNING: [Synth 8-3331] design sprites has unconnected port enArrayOut
+WARNING: [Synth 8-3331] design sprites has unconnected port reset
+WARNING: [Synth 8-3331] design sprites has unconnected port clk25
+WARNING: [Synth 8-3331] design sprites has unconnected port enable
+WARNING: [Synth 8-3331] design sprites has unconnected port b1
+WARNING: [Synth 8-3331] design sprites has unconnected port b2
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1038.340 ; gain = 503.738
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 904.422 ; gain = 369.840
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -64,73 +74,71 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1038.340 ; gain = 503.738
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 904.422 ; gain = 369.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1038.340 ; gain = 503.738
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 904.422 ; gain = 369.840
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25/Prescaler25_in_context.xdc] for cell 'Pre0'
-Finished Parsing XDC File [c:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25/Prescaler25_in_context.xdc] for cell 'Pre0'
-Parsing XDC File [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc]
-WARNING: [Vivado 12-584] No ports matched 'data_out[0]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:24]
-WARNING: [Vivado 12-584] No ports matched 'data_out[1]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:25]
-WARNING: [Vivado 12-584] No ports matched 'data_out[2]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:26]
-WARNING: [Vivado 12-584] No ports matched 'data_out[3]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:27]
-WARNING: [Vivado 12-584] No ports matched 'data_out[4]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:28]
-WARNING: [Vivado 12-584] No ports matched 'data_out[5]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:29]
-WARNING: [Vivado 12-584] No ports matched 'data_out[6]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:30]
-WARNING: [Vivado 12-584] No ports matched 'data_out[7]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:31]
-WARNING: [Vivado 12-584] No ports matched 'data_out[7]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:32]
-WARNING: [Vivado 12-584] No ports matched 'data_out[0]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:33]
-WARNING: [Vivado 12-584] No ports matched 'data_out[1]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:34]
-WARNING: [Vivado 12-584] No ports matched 'data_out[2]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:35]
-WARNING: [Vivado 12-584] No ports matched 'data_out[3]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:36]
-WARNING: [Vivado 12-584] No ports matched 'data_out[4]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:37]
-WARNING: [Vivado 12-584] No ports matched 'data_out[5]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:38]
-WARNING: [Vivado 12-584] No ports matched 'data_out[6]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:39]
-WARNING: [Vivado 12-584] No ports matched 'leds[3]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:46]
-WARNING: [Vivado 12-584] No ports matched 'leds[2]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:47]
-WARNING: [Vivado 12-584] No ports matched 'leds[1]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:48]
-WARNING: [Vivado 12-584] No ports matched 'leds[0]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:49]
-WARNING: [Vivado 12-584] No ports matched 'leds[0]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:50]
-WARNING: [Vivado 12-584] No ports matched 'leds[1]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:51]
-WARNING: [Vivado 12-584] No ports matched 'leds[2]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:52]
-WARNING: [Vivado 12-584] No ports matched 'leds[3]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:53]
-WARNING: [Vivado 12-584] No ports matched 'd[7]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:73]
-WARNING: [Vivado 12-584] No ports matched 'd[7]'. [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:74]
-Finished Parsing XDC File [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Parsing XDC File [c:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25/Prescaler25_in_context.xdc] for cell 'Pre0'
+Finished Parsing XDC File [c:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25/Prescaler25_in_context.xdc] for cell 'Pre0'
+Parsing XDC File [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc]
+WARNING: [Vivado 12-584] No ports matched 'data_out[0]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'data_out[1]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'data_out[2]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'data_out[3]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'data_out[4]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'data_out[5]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'data_out[6]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'data_out[7]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'data_out[7]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'data_out[0]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'data_out[1]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'data_out[2]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'data_out[3]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'data_out[4]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'data_out[5]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'data_out[6]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'leds[3]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'leds[2]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'leds[1]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:48]
+WARNING: [Vivado 12-584] No ports matched 'leds[0]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'leds[0]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'leds[1]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'leds[2]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'leds[3]'. [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc:53]
+Finished Parsing XDC File [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1280.578 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1122.863 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.445 . Memory (MB): peak = 1280.578 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.399 . Memory (MB): peak = 1122.863 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:56 ; elapsed = 00:00:54 . Memory (MB): peak = 1280.578 ; gain = 745.977
+Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 1122.863 ; gain = 588.281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:56 ; elapsed = 00:00:54 . Memory (MB): peak = 1280.578 ; gain = 745.977
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 1122.863 ; gain = 588.281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25/Prescaler25_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25/Prescaler25_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25/Prescaler25_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25/Prescaler25_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for Pre0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:00:54 . Memory (MB): peak = 1280.578 ; gain = 745.977
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 1122.863 ; gain = 588.281
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'UART_rx'
 ---------------------------------------------------------------------------------------------------
@@ -143,30 +151,17 @@ INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'UA
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'rx_state_reg' using encoding 'sequential' in module 'UART_rx'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:01 ; elapsed = 00:04:04 . Memory (MB): peak = 1280.578 ; gain = 745.977
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 1122.863 ; gain = 588.281
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |UART_rx__GB0  |           1|     61109|
-|2     |UART_rx__GB1  |           1|     62141|
-|3     |UART_rx__GB2  |           1|     60529|
-|4     |UART_rx__GB3  |           1|     62099|
-|5     |UART_rx__GB4  |           1|     60954|
-|6     |UART_rx__GB5  |           1|     62083|
-|7     |UART_rx__GB6  |           1|     62290|
-|8     |UART_rx__GB7  |           1|     54653|
-|9     |UART_rx__GB8  |           1|     56894|
-|10    |UART_rx__GB9  |           1|     56881|
-|11    |UART_rx__GB10 |           1|     56878|
-|12    |UART_rx__GB11 |           1|     55717|
-|13    |UART_rx__GB12 |           1|     56900|
-|14    |UART_rx__GB13 |           1|     55734|
-|15    |UART_rx__GB14 |           1|     56890|
-|16    |UART_rx__GB15 |           1|     55710|
-|17    |top__GC0      |           1|     33287|
+|1     |sprites__GB0  |           1|     33915|
+|2     |sprites__GB1  |           1|     32497|
+|3     |sprites__GB2  |           1|     38010|
+|4     |top__GC0      |           1|     33575|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -181,32 +176,31 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 1541  
+	               32 Bit    Registers := 1542  
 	               10 Bit    Registers := 2     
-	                8 Bit    Registers := 1     
-	                7 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
 	                6 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 8     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1539  
+	   2 Input     32 Bit        Muxes := 3     
 	   2 Input     10 Bit        Muxes := 5     
 	   2 Input      8 Bit        Muxes := 2     
 	   4 Input      8 Bit        Muxes := 2     
 	   2 Input      6 Bit        Muxes := 5     
 	   2 Input      5 Bit        Muxes := 2     
-	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
 	 400 Input      3 Bit        Muxes := 40    
 	   2 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
 	 400 Input      2 Bit        Muxes := 3     
-	   4 Input      1 Bit        Muxes := 9     
-	   2 Input      1 Bit        Muxes := 8     
-	   3 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 130   
+	   3 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 5     
 	 400 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -215,34 +209,39 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module UART_rx 
+Module sprites 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1537  
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 125   
+Module UART_rx 
+Detailed RTL Component Info : 
++---Adders : 
 	   2 Input      6 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 1536  
-	                8 Bit    Registers := 1     
-	                7 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
 	                6 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1538  
 	   2 Input      8 Bit        Muxes := 2     
 	   4 Input      8 Bit        Muxes := 2     
 	   2 Input      6 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 9     
-	   2 Input      1 Bit        Muxes := 6     
-	   3 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 5     
 Module VGA 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -276,15 +275,217 @@ BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3331] design top has unconnected port enLED
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design top has unconnected port enArrayLED
 WARNING: [Synth 8-3331] design top has unconnected port button1
 WARNING: [Synth 8-3331] design top has unconnected port button2
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][7]' (FDE) to 'SP0i_1/conf_array_reg[9,11][8]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][8]' (FDE) to 'SP0i_1/conf_array_reg[9,11][9]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][9]' (FDE) to 'SP0i_1/conf_array_reg[9,11][10]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][10]' (FDE) to 'SP0i_1/conf_array_reg[9,11][11]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][11]' (FDE) to 'SP0i_1/conf_array_reg[9,11][12]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][12]' (FDE) to 'SP0i_1/conf_array_reg[9,11][13]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][13]' (FDE) to 'SP0i_1/conf_array_reg[9,11][14]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][14]' (FDE) to 'SP0i_1/conf_array_reg[9,11][15]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][15]' (FDE) to 'SP0i_1/conf_array_reg[9,11][16]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][16]' (FDE) to 'SP0i_1/conf_array_reg[9,11][17]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][17]' (FDE) to 'SP0i_1/conf_array_reg[9,11][18]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][18]' (FDE) to 'SP0i_1/conf_array_reg[9,11][19]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][19]' (FDE) to 'SP0i_1/conf_array_reg[9,11][20]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][20]' (FDE) to 'SP0i_1/conf_array_reg[9,11][21]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][21]' (FDE) to 'SP0i_1/conf_array_reg[9,11][22]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][22]' (FDE) to 'SP0i_1/conf_array_reg[9,11][23]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][23]' (FDE) to 'SP0i_1/conf_array_reg[9,11][24]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][24]' (FDE) to 'SP0i_1/conf_array_reg[9,11][25]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][25]' (FDE) to 'SP0i_1/conf_array_reg[9,11][26]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][26]' (FDE) to 'SP0i_1/conf_array_reg[9,11][27]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][27]' (FDE) to 'SP0i_1/conf_array_reg[9,11][28]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][28]' (FDE) to 'SP0i_1/conf_array_reg[9,11][29]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][29]' (FDE) to 'SP0i_1/conf_array_reg[9,11][30]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,11][30]' (FDE) to 'SP0i_1/conf_array_reg[9,11][31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[9,11][31] )
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][7]' (FDE) to 'SP0i_1/conf_array_reg[24,20][8]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][8]' (FDE) to 'SP0i_1/conf_array_reg[24,20][9]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][9]' (FDE) to 'SP0i_1/conf_array_reg[24,20][10]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][10]' (FDE) to 'SP0i_1/conf_array_reg[24,20][11]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][11]' (FDE) to 'SP0i_1/conf_array_reg[24,20][12]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][12]' (FDE) to 'SP0i_1/conf_array_reg[24,20][13]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][13]' (FDE) to 'SP0i_1/conf_array_reg[24,20][14]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][14]' (FDE) to 'SP0i_1/conf_array_reg[24,20][15]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][15]' (FDE) to 'SP0i_1/conf_array_reg[24,20][16]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][16]' (FDE) to 'SP0i_1/conf_array_reg[24,20][17]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][17]' (FDE) to 'SP0i_1/conf_array_reg[24,20][18]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][18]' (FDE) to 'SP0i_1/conf_array_reg[24,20][19]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][19]' (FDE) to 'SP0i_1/conf_array_reg[24,20][20]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][20]' (FDE) to 'SP0i_1/conf_array_reg[24,20][21]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][21]' (FDE) to 'SP0i_1/conf_array_reg[24,20][22]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][22]' (FDE) to 'SP0i_1/conf_array_reg[24,20][23]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][23]' (FDE) to 'SP0i_1/conf_array_reg[24,20][24]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][24]' (FDE) to 'SP0i_1/conf_array_reg[24,20][25]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][25]' (FDE) to 'SP0i_1/conf_array_reg[24,20][26]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][26]' (FDE) to 'SP0i_1/conf_array_reg[24,20][27]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][27]' (FDE) to 'SP0i_1/conf_array_reg[24,20][28]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][28]' (FDE) to 'SP0i_1/conf_array_reg[24,20][29]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][29]' (FDE) to 'SP0i_1/conf_array_reg[24,20][30]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,20][30]' (FDE) to 'SP0i_1/conf_array_reg[24,20][31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[24,20][31] )
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][7]' (FDE) to 'SP0i_1/conf_array_reg[9,13][8]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][8]' (FDE) to 'SP0i_1/conf_array_reg[9,13][9]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][9]' (FDE) to 'SP0i_1/conf_array_reg[9,13][10]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][10]' (FDE) to 'SP0i_1/conf_array_reg[9,13][11]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][11]' (FDE) to 'SP0i_1/conf_array_reg[9,13][12]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][12]' (FDE) to 'SP0i_1/conf_array_reg[9,13][13]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][13]' (FDE) to 'SP0i_1/conf_array_reg[9,13][14]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][14]' (FDE) to 'SP0i_1/conf_array_reg[9,13][15]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][15]' (FDE) to 'SP0i_1/conf_array_reg[9,13][16]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][16]' (FDE) to 'SP0i_1/conf_array_reg[9,13][17]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][17]' (FDE) to 'SP0i_1/conf_array_reg[9,13][18]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][18]' (FDE) to 'SP0i_1/conf_array_reg[9,13][19]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][19]' (FDE) to 'SP0i_1/conf_array_reg[9,13][20]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][20]' (FDE) to 'SP0i_1/conf_array_reg[9,13][21]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][21]' (FDE) to 'SP0i_1/conf_array_reg[9,13][22]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][22]' (FDE) to 'SP0i_1/conf_array_reg[9,13][23]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][23]' (FDE) to 'SP0i_1/conf_array_reg[9,13][24]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][24]' (FDE) to 'SP0i_1/conf_array_reg[9,13][25]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][25]' (FDE) to 'SP0i_1/conf_array_reg[9,13][26]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][26]' (FDE) to 'SP0i_1/conf_array_reg[9,13][27]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][27]' (FDE) to 'SP0i_1/conf_array_reg[9,13][28]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][28]' (FDE) to 'SP0i_1/conf_array_reg[9,13][29]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][29]' (FDE) to 'SP0i_1/conf_array_reg[9,13][30]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,13][30]' (FDE) to 'SP0i_1/conf_array_reg[9,13][31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[9,13][31] )
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][7]' (FDE) to 'SP0i_1/conf_array_reg[24,18][8]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][8]' (FDE) to 'SP0i_1/conf_array_reg[24,18][9]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][9]' (FDE) to 'SP0i_1/conf_array_reg[24,18][10]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][10]' (FDE) to 'SP0i_1/conf_array_reg[24,18][11]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][11]' (FDE) to 'SP0i_1/conf_array_reg[24,18][12]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][12]' (FDE) to 'SP0i_1/conf_array_reg[24,18][13]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][13]' (FDE) to 'SP0i_1/conf_array_reg[24,18][14]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][14]' (FDE) to 'SP0i_1/conf_array_reg[24,18][15]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][15]' (FDE) to 'SP0i_1/conf_array_reg[24,18][16]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][16]' (FDE) to 'SP0i_1/conf_array_reg[24,18][17]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][17]' (FDE) to 'SP0i_1/conf_array_reg[24,18][18]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][18]' (FDE) to 'SP0i_1/conf_array_reg[24,18][19]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][19]' (FDE) to 'SP0i_1/conf_array_reg[24,18][20]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][20]' (FDE) to 'SP0i_1/conf_array_reg[24,18][21]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][21]' (FDE) to 'SP0i_1/conf_array_reg[24,18][22]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][22]' (FDE) to 'SP0i_1/conf_array_reg[24,18][23]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][23]' (FDE) to 'SP0i_1/conf_array_reg[24,18][24]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][24]' (FDE) to 'SP0i_1/conf_array_reg[24,18][25]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][25]' (FDE) to 'SP0i_1/conf_array_reg[24,18][26]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][26]' (FDE) to 'SP0i_1/conf_array_reg[24,18][27]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][27]' (FDE) to 'SP0i_1/conf_array_reg[24,18][28]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][28]' (FDE) to 'SP0i_1/conf_array_reg[24,18][29]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][29]' (FDE) to 'SP0i_1/conf_array_reg[24,18][30]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[24,18][30]' (FDE) to 'SP0i_1/conf_array_reg[24,18][31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[24,18][31] )
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,15][7]' (FDE) to 'SP0i_1/conf_array_reg[9,15][8]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,15][8]' (FDE) to 'SP0i_1/conf_array_reg[9,15][9]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,15][9]' (FDE) to 'SP0i_1/conf_array_reg[9,15][10]'
+INFO: [Synth 8-3886] merging instance 'SP0i_1/conf_array_reg[9,15][10]' (FDE) to 'SP0i_1/conf_array_reg[9,15][11]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[9,15][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[24,21][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[24,22][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[9,16][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[25,0][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[24,15][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[9,21][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[9,22][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[24,12][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[24,10][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[10,3][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[25,3][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[24,7][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[24,3][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[8,18][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[10,14][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[23,21][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[23,20][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[8,14][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[23,18][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[8,12][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[8,11][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[8,10][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[8,9][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[11,1][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[11,3][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[8,5][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[11,4][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[25,10][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[25,12][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[11,11][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[23,15][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[11,13][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[7,22][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[25,14][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[11,14][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[7,20][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[11,15][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[7,18][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[23,14][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[11,18][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[23,11][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[7,14][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[7,12][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[25,21][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[11,21][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[7,10][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[11,22][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[23,10][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[12,3][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[12,7][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[12,10][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[7,4][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[26,3][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[23,5][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[12,18][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[7,0][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[12,21][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[6,21][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[6,20][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[13,3][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[13,10][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[13,11][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[22,19][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[13,15][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[6,15][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[22,18][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[26,12][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[26,15][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[22,16][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[6,10][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[13,20][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[22,14][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[13,22][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[26,18][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[22,12][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[14,6][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[14,9][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[14,10][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[14,12][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[14,13][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[14,15][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[5,21][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[14,18][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[14,19][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[14,20][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[27,7][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[22,5][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[5,16][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[22,4][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[27,13][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[27,15][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[22,3][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[5,11][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[15,5][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SP0i_1/\conf_array_reg[21,22][31] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:07:19 ; elapsed = 00:07:54 . Memory (MB): peak = 1280.578 ; gain = 745.977
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:48 ; elapsed = 00:03:05 . Memory (MB): peak = 1319.516 ; gain = 784.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -294,6 +495,12 @@ ROM:
 +------------+-------------------+---------------+----------------+
 |Module Name | RTL Object        | Depth x Width | Implemented As | 
 +------------+-------------------+---------------+----------------+
+|VGA         | SpaceshipBlue[0]  | 512x2         | LUT            | 
+|VGA         | SpaceshipRed[0]   | 512x2         | LUT            | 
+|VGA         | MushroomRed[0]    | 512x2         | LUT            | 
+|VGA         | MushroomYellow[0] | 512x2         | LUT            | 
+|VGA         | HartEmpty[0]      | 512x1         | LUT            | 
+|VGA         | InstaKill[0]      | 512x1         | LUT            | 
 |VGA         | SpaceshipBlue[0]  | 512x2         | LUT            | 
 |VGA         | SpaceshipRed[0]   | 512x2         | LUT            | 
 |VGA         | MushroomRed[0]    | 512x2         | LUT            | 
@@ -310,23 +517,10 @@ Report RTL Partitions:
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |UART_rx__GB0  |           1|      6652|
-|2     |UART_rx__GB1  |           1|      5460|
-|3     |UART_rx__GB2  |           1|      7172|
-|4     |UART_rx__GB3  |           1|      5357|
-|5     |UART_rx__GB4  |           1|      6417|
-|6     |UART_rx__GB5  |           1|      5338|
-|7     |UART_rx__GB6  |           1|      5659|
-|8     |UART_rx__GB7  |           1|     11243|
-|9     |UART_rx__GB8  |           1|      3946|
-|10    |UART_rx__GB9  |           1|      3497|
-|11    |UART_rx__GB10 |           1|      3499|
-|12    |UART_rx__GB11 |           1|      3407|
-|13    |UART_rx__GB12 |           1|      3440|
-|14    |UART_rx__GB13 |           1|      3393|
-|15    |UART_rx__GB14 |           1|      3458|
-|16    |UART_rx__GB15 |           1|      3408|
-|17    |top__GC0      |           1|     27695|
+|1     |sprites__GB0  |           1|      3837|
+|2     |sprites__GB1  |           1|      3771|
+|3     |sprites__GB2  |           1|      4880|
+|4     |top__GC0      |           1|      8657|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -334,64 +528,36 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'Pre0/clk_25' to pin 'Pre0/bbstub_clk_25/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:07:31 ; elapsed = 00:08:06 . Memory (MB): peak = 1280.578 ; gain = 745.977
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:56 ; elapsed = 00:03:13 . Memory (MB): peak = 1319.516 ; gain = 784.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:10:09 ; elapsed = 00:10:45 . Memory (MB): peak = 1479.875 ; gain = 945.273
+Finished Timing Optimization : Time (s): cpu = 00:03:01 ; elapsed = 00:03:18 . Memory (MB): peak = 1319.516 ; gain = 784.934
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |UART_rx__GB0  |           1|      6652|
-|2     |UART_rx__GB1  |           1|      5460|
-|3     |UART_rx__GB3  |           1|      5357|
-|4     |UART_rx__GB4  |           1|      6417|
-|5     |UART_rx__GB5  |           1|      5338|
-|6     |UART_rx__GB6  |           1|      5659|
-|7     |UART_rx__GB7  |           1|     11243|
-|8     |UART_rx__GB8  |           1|      3946|
-|9     |UART_rx__GB9  |           1|      3497|
-|10    |UART_rx__GB10 |           1|      3499|
-|11    |UART_rx__GB11 |           1|      3407|
-|12    |UART_rx__GB12 |           1|      3440|
-|13    |UART_rx__GB14 |           1|      3458|
-|14    |UART_rx__GB15 |           1|      3408|
-|15    |top_GT0       |           1|     29499|
-|16    |top_GT1       |           1|      8760|
+|1     |sprites__GB0  |           1|      3837|
+|2     |sprites__GB1  |           1|      3771|
+|3     |sprites__GB2  |           1|      4880|
+|4     |top__GC0      |           1|      8657|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:11:25 ; elapsed = 00:12:02 . Memory (MB): peak = 1485.934 ; gain = 951.332
+Finished Technology Mapping : Time (s): cpu = 00:03:10 ; elapsed = 00:03:27 . Memory (MB): peak = 1319.516 ; gain = 784.934
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+--------------+------------+----------+
-|      |RTL Partition |Replication |Instances |
-+------+--------------+------------+----------+
-|1     |UART_rx__GB0  |           1|      2582|
-|2     |UART_rx__GB1  |           1|      1219|
-|3     |UART_rx__GB3  |           1|      1187|
-|4     |UART_rx__GB4  |           1|      2448|
-|5     |UART_rx__GB5  |           1|      1154|
-|6     |UART_rx__GB6  |           1|      1380|
-|7     |UART_rx__GB7  |           1|      7977|
-|8     |UART_rx__GB8  |           1|       756|
-|9     |UART_rx__GB9  |           1|       759|
-|10    |UART_rx__GB10 |           1|       765|
-|11    |UART_rx__GB11 |           1|       736|
-|12    |UART_rx__GB12 |           1|       753|
-|13    |UART_rx__GB14 |           1|       748|
-|14    |UART_rx__GB15 |           1|       744|
-|15    |top_GT0       |           1|     15291|
-|16    |top_GT1       |           1|      1995|
-+------+--------------+------------+----------+
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -404,112 +570,11 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[2,17][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[3,17][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[5,17][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[15,17][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[19,17][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[21,17][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[22,17][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[23,17][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[24,17][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[25,17][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[26,17][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[27,17][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[28,17][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[29,17][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[30,17][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[31,17][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[21,16][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[22,16][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[23,16][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[24,16][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[25,16][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[26,16][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[27,16][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[28,16][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[29,16][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[30,16][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[31,16][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[3,19][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[8,19][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[22,19][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[23,19][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[24,19][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[25,19][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[26,19][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[27,19][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[28,19][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[29,19][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[30,19][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[31,19][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[0,18][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[2,18][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[4,18][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[6,18][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[8,18][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[9,18][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[11,18][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[13,18][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[14,18][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[22,18][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[23,18][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[24,18][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[25,18][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[26,18][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[27,18][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[28,18][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[29,18][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[30,18][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[31,18][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[0,21][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[1,21][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[13,21][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[15,21][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[17,21][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[19,21][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[20,21][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[22,21][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[23,21][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[24,21][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[25,21][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[26,21][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[27,21][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[28,21][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[29,21][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[30,21][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[31,21][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[0,20][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[1,20][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[6,20][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[8,20][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[13,20][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[22,20][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[23,20][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[24,20][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[25,20][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[26,20][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[27,20][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[28,20][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[29,20][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[30,20][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[31,20][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[0,23][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[2,23][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[3,23][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[5,23][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[12,23][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[13,23][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[22,23][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[23,23][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[24,23][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\receiver/arrayOut_reg[25,23][16] )
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:11:39 ; elapsed = 00:12:17 . Memory (MB): peak = 1485.934 ; gain = 951.332
+Finished IO Insertion : Time (s): cpu = 00:03:14 ; elapsed = 00:03:31 . Memory (MB): peak = 1319.516 ; gain = 784.934
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -522,7 +587,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:11:39 ; elapsed = 00:12:17 . Memory (MB): peak = 1485.934 ; gain = 951.332
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:14 ; elapsed = 00:03:31 . Memory (MB): peak = 1319.516 ; gain = 784.934
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -534,25 +599,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:11:42 ; elapsed = 00:12:20 . Memory (MB): peak = 1485.934 ; gain = 951.332
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:15 ; elapsed = 00:03:32 . Memory (MB): peak = 1319.516 ; gain = 784.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:11:42 ; elapsed = 00:12:20 . Memory (MB): peak = 1485.934 ; gain = 951.332
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:15 ; elapsed = 00:03:32 . Memory (MB): peak = 1319.516 ; gain = 784.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:11:45 ; elapsed = 00:12:23 . Memory (MB): peak = 1485.934 ; gain = 951.332
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:16 ; elapsed = 00:03:33 . Memory (MB): peak = 1319.516 ; gain = 784.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:11:45 ; elapsed = 00:12:23 . Memory (MB): peak = 1485.934 ; gain = 951.332
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:16 ; elapsed = 00:03:33 . Memory (MB): peak = 1319.516 ; gain = 784.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -570,55 +635,57 @@ Report Cell Usage:
 |      |Cell               |Count |
 +------+-------------------+------+
 |1     |Prescaler25_bbox_0 |     1|
-|2     |CARRY4             |    50|
-|3     |LUT1               |     9|
-|4     |LUT2               |   136|
-|5     |LUT3               |  1200|
-|6     |LUT4               |   392|
-|7     |LUT5               |   193|
-|8     |LUT6               |  7985|
-|9     |MUXF7              |   711|
-|10    |MUXF8              |   191|
-|11    |FDCE               |    70|
-|12    |FDRE               | 10914|
-|13    |FDSE               |     4|
-|14    |IBUF               |     2|
-|15    |OBUF               |    13|
-|16    |OBUFT              |     1|
+|2     |BUFG               |     2|
+|3     |CARRY4             |    50|
+|4     |LUT1               |    12|
+|5     |LUT2               |   284|
+|6     |LUT3               |   835|
+|7     |LUT4               |   176|
+|8     |LUT5               |   278|
+|9     |LUT6               |  2183|
+|10    |MUXF7              |   608|
+|11    |MUXF8              |   179|
+|12    |FDCE               |    70|
+|13    |FDRE               | 10922|
+|14    |FDSE               |     4|
+|15    |IBUF               |     3|
+|16    |OBUF               |    15|
+|17    |OBUFT              |     1|
 +------+-------------------+------+
 
 Report Instance Areas: 
 +------+-----------+--------+------+
 |      |Instance   |Module  |Cells |
 +------+-----------+--------+------+
-|1     |top        |        | 21872|
-|2     |  VGA0     |VGA     |  1636|
-|3     |  receiver |UART_rx | 20215|
+|1     |top        |        | 15623|
+|2     |  SP0      |sprites | 14555|
+|3     |  VGA0     |VGA     |   907|
+|4     |  receiver |UART_rx |   130|
 +------+-----------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:11:45 ; elapsed = 00:12:23 . Memory (MB): peak = 1485.934 ; gain = 951.332
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:16 ; elapsed = 00:03:33 . Memory (MB): peak = 1319.516 ; gain = 784.934
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:10:57 ; elapsed = 00:12:06 . Memory (MB): peak = 1485.934 ; gain = 709.094
-Synthesis Optimization Complete : Time (s): cpu = 00:11:46 ; elapsed = 00:12:25 . Memory (MB): peak = 1485.934 ; gain = 951.332
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:46 ; elapsed = 00:03:19 . Memory (MB): peak = 1319.516 ; gain = 566.492
+Synthesis Optimization Complete : Time (s): cpu = 00:03:16 ; elapsed = 00:03:33 . Memory (MB): peak = 1319.516 ; gain = 784.934
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 952 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 837 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'top' is not ideal for floorplanning, since the cellview 'UART_rx' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+WARNING: [Netlist 29-101] Netlist 'top' is not ideal for floorplanning, since the cellview 'sprites' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1485.934 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1319.516 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-130 Infos, 50 Warnings, 0 Critical Warnings and 0 Errors encountered.
+233 Infos, 55 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:11:55 ; elapsed = 00:12:37 . Memory (MB): peak = 1485.934 ; gain = 1194.105
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1485.934 ; gain = 0.000
+synth_design: Time (s): cpu = 00:03:25 ; elapsed = 00:03:42 . Memory (MB): peak = 1319.516 ; gain = 1027.801
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1319.516 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.runs/synth_1/top.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Apr  7 13:56:54 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  7 19:17:41 2022...

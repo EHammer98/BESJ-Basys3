@@ -69,18 +69,18 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 1
   create_project -in_memory -part xc7a35tcpg236-1
-  set_property board_part_repo_paths {C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.board} [current_project]
+  set_property board_part_repo_paths {C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.board} [current_project]
   set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.xpr [current_project]
-  set_property ip_output_repo C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.xpr [current_project]
+  set_property ip_output_repo C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.runs/synth_1/top.dcp
-  read_ip -quiet C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25.xci
-  read_xdc C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc
+  add_files -quiet C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.runs/synth_1/top.dcp
+  read_ip -quiet C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25.xci
+  read_xdc C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc
   link_design -top top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

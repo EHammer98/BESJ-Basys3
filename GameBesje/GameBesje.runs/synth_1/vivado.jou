@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Apr  7 13:44:09 2022
-# Process ID: 336
-# Current directory: C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.runs/synth_1
+# Start of session at: Thu Apr  7 19:13:51 2022
+# Process ID: 4672
+# Current directory: C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.runs/synth_1/top.vds
-# Journal file: C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.runs/synth_1\vivado.jou
+# Log file: C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.runs/synth_1/top.vds
+# Journal file: C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source top.tcl -notrace

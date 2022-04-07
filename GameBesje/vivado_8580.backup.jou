@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Apr  6 14:16:45 2022
+# Process ID: 8580
+# Current directory: C:/Users/Elwin/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8960
+# Log file: C:/Users/Elwin/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/Elwin/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.xpr
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_run impl_1
+file copy -force C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.runs/impl_1/top.bit C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/BitjeSlow2.bit
+close_design
+synth_design -rtl -name rtl_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list {d[7]}]]
+place_ports {d[7]} V14
+save_constraints
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+close_design
+open_run impl_1
+file copy -force C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.runs/impl_1/top.bit C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/BitjeSlow2.bit
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.runs/impl_1/top.bit C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/clean.bit
+refresh_design
+archive_project C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje.xpr.zip -temp_dir C:/Users/Elwin/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-8580-DESKTOP-2II8BHC -force -include_local_ip_cache -include_config_settings

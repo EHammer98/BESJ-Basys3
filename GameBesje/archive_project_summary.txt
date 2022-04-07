@@ -45,7 +45,7 @@
 Section (1) - PROJECT INFORMATION
 ---------------------------------
 Name      = GameBesje
-Directory = C:/Users/Elwin/Vivado/BESJ-Basys3/GameBesje_POC_GridPrinting
+Directory = C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje
 
 WARNING: Please verify the compiled library directory path for the following property in the
          current project. The path may point to an invalid location after opening this project.
@@ -100,7 +100,7 @@ None
 None
 
 <sources_1>
-C:/Users/Elwin/Downloads/UART_rx.vhd
+C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/archive_project_summary.txt
 
 <utils_1>
 None
@@ -114,6 +114,7 @@ List of all the source files present in the archived project:-
 ./GameBesje.srcs/sources_1/new/sprites.vhd
 ./GameBesje.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/vga.vhd
 ./GameBesje.srcs/sources_1/new/top.vhd
+./GameBesje.srcs/sources_1/imports/GameBesje/archive_project_summary.txt
 
 <constrs_1>
 ./GameBesje.srcs/constrs_1/new/cnts.xdc

@@ -72,3 +72,9 @@ set_property PACKAGE_PIN U16 [get_ports {d[0]}]
 
 set_property IOSTANDARD LVCMOS33 [get_ports {d[7]}]
 set_property PACKAGE_PIN V14 [get_ports {d[7]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports enArrayLED]
+set_property PACKAGE_PIN P1 [get_ports enArrayLED]
+
+set_property IOSTANDARD LVCMOS33 [get_ports arrayStart]
+set_property PACKAGE_PIN K2 [get_ports arrayStart]

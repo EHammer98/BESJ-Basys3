@@ -1,5 +1,5 @@
-set_property SRC_FILE_INFO {cfile:c:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25.xdc rfile:../GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25.xdc id:1 order:EARLY scoped_inst:Pre0/inst} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Users/Elwin/Documents/GitHub/BESJ-Basys3/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc rfile:../GameBesje.srcs/constrs_1/new/cnts.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:c:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25.xdc rfile:../GameBesje.srcs/sources_1/ip/Prescaler25/Prescaler25.xdc id:1 order:EARLY scoped_inst:Pre0/inst} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/Elwin/Downloads/GameBesje.xpr/GameBesje/GameBesje.srcs/constrs_1/new/cnts.xdc rfile:../GameBesje.srcs/constrs_1/new/cnts.xdc id:2} [current_design]
 current_instance Pre0/inst
 set_property src_info {type:SCOPED_XDC file:1 line:57 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.1

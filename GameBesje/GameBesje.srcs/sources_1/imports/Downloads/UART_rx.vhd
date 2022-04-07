@@ -1,18 +1,7 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
-USE IEEE.numeric_std.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
-package p_sprite is
-    type darray is array (0 to 31, 0 to 23) of integer; 
-    type selector is array (8 downto 0) of integer;
-end package p_sprite;
-use work.p_sprite.all;
-
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
-USE IEEE.numeric_std.ALL;
 
 
 entity UART_rx is
@@ -23,12 +12,11 @@ entity UART_rx is
     port(
         clk            : in  std_logic;
         reset          : in  std_logic;
-        enVGA          : in  std_logic;        
-        arrayOut      :   out darray;
+        enSig         : out std_logic;
         avSig         : out std_logic;
         rx_data_in     : in  std_logic;
         rx_audio_out    : out std_logic_vector (6 downto 0); --6
-        rx_video_out    : out std_logic_vector (6 downto 0)  --6
+        rx_video_out    : out std_logic_vector (7 downto 0)  --6
         );
 end UART_rx;
 
@@ -37,17 +25,13 @@ architecture Behavioral of UART_rx is
 
     type rx_states_t is (IDLE, START, DATA, STOP);
     signal rx_state: rx_states_t := IDLE;
+
     signal baud_rate_x16_clk  : std_logic := '0';
-    signal rx_stored_data     : std_logic_vector(7 downto 0);
-    signal videoData          : std_logic_vector(6 downto 0);
-    signal gridDone           : std_logic; 
-    --Sprites
+    signal rx_stored_data     : std_logic_vector(7 downto 0) := (others => '0');
+
+
 
 begin
-
-   
-    
-    
 
 
 -- The baud_rate_x16_clk_generator process generates an oversampled clock.
@@ -59,7 +43,6 @@ begin
 
     baud_rate_x16_clk_generator: process(clk)
     variable baud_x16_count: integer range 0 to (BAUD_X16_CLK_TICKS - 1) := (BAUD_X16_CLK_TICKS - 1);
-       
     begin
         if rising_edge(clk) then
             if (reset = '1') then
@@ -84,18 +67,6 @@ begin
     UART_rx_FSM: process(clk)
         variable bit_duration_count : integer range 0 to 15 := 0;
         variable bit_count          : integer range 0 to 7  := 0;
-     --Sprites
-    variable conf_array: darray := (others => (others => 0));
-    variable x: integer := 0;
-    variable y: integer := 0;
-    
-    variable s : integer := 0;
-
-    variable enElement : integer := 0;
-    variable cntElements : integer :=0;
-    variable cntData : integer :=0;
-    --       
-        
     begin
         if rising_edge(clk) then
             if (reset = '1') then
@@ -113,9 +84,10 @@ begin
                             rx_stored_data <= (others => '0');    -- clean the received data register
                             bit_duration_count := 0;              -- reset counters
                             bit_count := 0;
-                            
+                            enSig <= '0';
                             if (rx_data_in = '0') then             -- if the start bit received
                                 rx_state <= START;                 -- transit to the START state
+                                enSig <= '1';
                             end if;
 
                         when START =>
@@ -149,38 +121,7 @@ begin
                         when STOP =>
 
                             if (bit_duration_count = 15) then      -- wait for "one" baud rate cycle
-                                videoData(0) <= rx_stored_data(0);     -- transer the received data to the outside world
-                                videoData(1) <= rx_stored_data(1);     -- transer the received data to the outside world
-                                videoData(2) <= rx_stored_data(2);     -- transer the received data to the outside world
-                                videoData(3) <= rx_stored_data(3);     -- transer the received data to the outside world
-                                videoData(4) <= rx_stored_data(4);     -- transer the received data to the outside world
-                                videoData(5) <= rx_stored_data(5);     -- transer the received data tso the outside world
-                                videoData(6) <= rx_stored_data(6);     -- transer the received data to the outside world
-                                rx_video_out <= videoData;
-                                avSig <= rx_stored_data(7);     -- transer the received data to the outside world
-                                rx_state <= IDLE;                                        
-                                
-                                     
-                                --Sprite                                
-                                s := to_integer(unsigned(videoData));
-                                conf_array(x,y) := s;
-                                if (x = 31) then
-                                    if (y = 23) then
-                                        y := 0;
-                                        -- done
-                                        gridDone <= '1';
-                                    else
-                                        y := y + 1;
-                                    end if;
-                                    x := 0;
-                                else
-                                    x := x + 1;             
-                                end if;
-                                --
-                                if enVGA = '1'  then
-                                    arrayOut <= conf_array;
-                                    gridDone <= '0';
-                                end if;                                
+                                rx_video_out <= rx_stored_data;     -- transer the received data to the outside world
                                 rx_state <= IDLE;
                             else
                                 bit_duration_count := bit_duration_count + 1;
@@ -192,11 +133,6 @@ begin
                 end if;
             end if;
         end if;
-        --VGA
-       -- if enVGA'event and enVGA = '1' then
-         --   arrayOut <= conf_array;
-        --end if;
-        --       
     end process UART_rx_FSM;
-    
+
 end Behavioral;

@@ -21,8 +21,11 @@ entity sprites is
         enable:     in std_logic;
         b1:         in std_logic;
         b2:         in std_logic;
+        arStart:         in std_logic;
+        vgaEN:         in std_logic;
         dataIn:     in std_logic_vector(6 downto 0);
         enSig:      in std_logic;
+        enArrayOut:      out std_logic;
         arrayOut:   out darray
     );
 end sprites;
@@ -30,7 +33,7 @@ end sprites;
 architecture Behavioral of sprites is
     signal data: integer;
     signal dataOld: integer;
-
+    signal enArray: std_logic;
 
 begin
     data <= to_integer(unsigned(dataIn));
@@ -48,25 +51,35 @@ begin
    
     begin
         if enSig'event and enSig = '1' then
-            s := data;
-            conf_array(x,y) := s;
-            if (x = 31) then
-                if (y = 23) then
-                    y := 0;
-                    
+        
+                              
+            if (arStart = '1') then
+                s := data;     
+                conf_array(x,y) := s;
+                if (x = 31) then
+                    if (y = 23) then
+                        y := 0;
+                        
+                    else
+                        y := y + 1;
+                    end if;
+                    x := 0;
                 else
-                    y := y + 1;
+                    x := x + 1;              
                 end if;
-                x := 0;
-            else
-                x := x + 1;              
-            end if;
-                       
+           end if;
       end if;
-      
-     if rising_edge(clk25) then  
-     
-        arrayOut <= conf_array;
-    end if; 
+      ---------------------------
+     if vgaEN'event and vgaEN = '1' then
+           arrayOut <= conf_array;
+            --gridDone <= '0';
+            
+     end if;    
+     --if rising_edge(clk25) then  
+    
+    
+    -- arrayOut <= conf_array;
+    --end if; 
+    
     end process;
 end Behavioral;
